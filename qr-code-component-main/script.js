@@ -6,7 +6,7 @@ class QRCodeCard extends HTMLElement {
     this.root.appendChild(styles);
 
     async function loadCSS() {
-      const request = await fetch("/style.css");
+      const request = await fetch("style.css");
       const css = await request.text();
       styles.textContent = css;
     }

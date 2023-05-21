@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Oswald&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 50vw;
+}
+
+
+app-summary {
+  width: 50%;
+}
+
+app-result {
+  width: 50%;
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    width: 100%;
+  }
+
+  .container {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 376px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 15px 10px 19px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+  }
+}

@@ -39,7 +39,6 @@ input::placeholder {
 
 input[type="number"] {
   display: inline-block;
-  font-size: 18px;
   border: 1px solid hsl(0, 0%, 86%);
   border-radius: 5px;
   padding: 0.5em;

@@ -1,0 +1,44 @@
+.result {
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  color: hsl(241, 100%, 89%);
+  padding: 2rem 2.5rem 5.4rem;
+  text-align: center;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.result h1 {
+  color: hsl(241, 100%, 89%);
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  padding-bottom: 1rem;
+}
+
+.result h3 {
+  color: hsl(0, 0%, 100%);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.score {
+  border-radius: 50%;
+  background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+  color: hsl(241, 100%, 89%, 0.5);
+  padding: 2rem;
+  width: 35%;
+  margin: 0 auto;
+}
+
+.score h2 {
+  color: hsl(0, 0%, 100%);
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+@media screen and (min-width: 376px) {
+  .result {
+    border-radius: 40px;
+  }
+}

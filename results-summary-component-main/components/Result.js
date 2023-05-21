@@ -19,7 +19,7 @@ export class Result extends HTMLElement {
     this.root.appendChild(styles);
 
     async function loadCSS() {
-      const request = await fetch("/components/Result.css");
+      const request = await fetch("./components/Result.css");
       const css = await request.text();
       styles.textContent = css;
     }

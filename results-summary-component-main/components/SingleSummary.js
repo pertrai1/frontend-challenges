@@ -76,7 +76,7 @@ export class SingleSummary extends HTMLElement {
     const title = this.getAttribute('title');
     this.shadowRoot.querySelector('.single-summary').classList.add(category);
     this.shadowRoot.querySelector('.summary-name').innerText = title;
-    this.shadowRoot.querySelector('img').src = `/assets/images/icon-${category}.svg`;
+    this.shadowRoot.querySelector('img').src = `./assets/images/icon-${category}.svg`;
   }
 
   static get observedAttributes() {

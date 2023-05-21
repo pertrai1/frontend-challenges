@@ -39,7 +39,7 @@ export class Summary extends HTMLElement {
     this.root.appendChild(styles);
 
     async function loadCSS() {
-      const request = await fetch("/components/Summary.css");
+      const request = await fetch("./components/Summary.css");
       const css = await request.text();
       styles.innerText = css;
     }

@@ -1,4 +1,4 @@
-import {SingleSummary} from '/components/SingleSummary.js';
+import {SingleSummary} from './components/SingleSummary.js';
 
 const template = document.createElement("template");
 template.innerHTML = `

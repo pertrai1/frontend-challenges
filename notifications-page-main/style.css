@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+:root {
+  --red: hsl(1, 90%, 64%);
+  --blue: hsl(219, 85%, 26%);
+  --white: hsl(0, 0%, 100%);
+  --very-light-grayish-blue: hsl(210, 60%, 98%);
+  --light-grayish-blue-1: hsl(211, 68%, 94%);
+  --light-grayish-blue-2: hsl(205, 33%, 90%);
+  --grayish-blue: hsl(219, 14%, 63%);
+  --dark-grayish-blue: hsl(219, 12%, 42%);
+  --very-dark-blue: hsl(224, 21%, 14%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--very-light-grayish-blue);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  background: var(--white);
+  box-shadow: 0 0 50px hsla(0, 0%, 0%, 0.1);
+  border-radius: 10px;
+  max-width: 46%;
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.count {
+  background: var(--very-dark-blue);
+  color: var(--white);
+  font-size: 1rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 5px;
+}
+
+.btn-mark {
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--grayish-blue);
+  font-size: .8rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.messages {
+  font-size: .85rem;
+  margin-top: 1.75rem;
+}
+
+.reply {
+  grid-area: reply;
+  border: 1px solid var(--light-grayish-blue-2);
+  border-radius: 5px;
+  padding: 0.75rem;
+}
+
+.unread {
+  background: var(--red);
+  width: 7px;
+  height: 7px;
+  border-radius: 100%;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.timespan {
+  color: var(--grayish-blue);
+  display: block;
+  line-height: 1.5;
+}
+
+.category {
+  color: var(--blue);
+  font-weight: 800;
+}
+
+@media screen and (max-width: 375px) {
+  main {
+    max-width: 100%;
+    padding: 2rem 0.5rem;
+  }
+}

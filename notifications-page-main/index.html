@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Notifications page</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main role="main">
+    <header>
+      <h1>
+        Notifications <span class="count">3</span>
+      </h1>
+      <button type="button" class="btn-mark">Mark all as read</button>
+    </header>
+
+    <section class="messages">
+      <single-message
+        read="false">
+        <single-message-avatar
+          slot="avatar"
+          alt="Mark Webber avatar"
+          src="assets/images/avatar-mark-webber.webp">
+        </single-message-avatar>
+        <div slot="content">
+          <strong>Mark Webber</strong> reacted to your recent post <span class="category">My first tournament today!</span><div class="unread"></div>
+          <span class="timespan">1m ago</span>
+        </div>
+      </single-message>
+      <single-message
+        read="false">
+        <single-message-avatar
+          slot="avatar"
+          alt="Angela Gray avatar"
+          src="assets/images/avatar-angela-gray.webp">
+        </single-message-avatar>
+        <div slot="content">
+          <strong>Angela Gray</strong> followed you<div class="unread"></div>
+          <span class="timespan">5m ago</span>
+        </div>
+      </single-message>
+      <single-message
+        read="false">
+        <single-message-avatar
+          slot="avatar"
+          alt="Jacob Thompson avatar"
+          src="assets/images/avatar-jacob-thompson.webp"
+          >
+        </single-message-avatar>
+        <div slot="content">
+          <strong>Jacob Thompson</strong> has joined your group <span class="category">Chess Club</span><div class="unread"></div>
+          <span class="timespan">1 day ago</span>
+        </div>
+      </single-message>
+      <single-message
+        read="true">
+        <single-message-avatar
+          slot="avatar"
+          alt="Rizky Hasanuddin avatar"
+          src="assets/images/avatar-rizky-hasanuddin.webp"
+          >
+        </single-message-avatar>
+        <div slot="content">
+          <strong>Rizky Hasanuddin</strong> sent you a private message
+          <span class="timespan">5 days ago</span>
+        </div>
+        <div slot="reply" class="reply">
+          Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
+          I'm already having lots of fun and improving my game.
+        </div>
+      </single-message>
+      <single-message
+        read="true">
+        <single-message-avatar
+          slot="avatar"
+          alt="Kimberly Smith avatar"
+          src="assets/images/avatar-kimberly-smith.webp"
+          >
+        </single-message-avatar>
+        <div slot="content">
+          <strong>Kimberly Smith</strong> commented on your picture
+          <span class="timespan">1 week ago</span>
+        </div>
+        <img slot="photo-comment" class="photo-comment" src="assets/images/image-chess.webp" alt="Kimberly Smith Comment" width="45" />
+      </single-message> 
+      <single-message
+        read="true">
+        <single-message-avatar
+          slot="avatar"
+          alt="Nathan Peterson avatar"
+          src="assets/images/avatar-nathan-peterson.webp"
+          >
+        </single-message-avatar>
+        <div slot="content">
+          <strong>Nathan Peterson</strong> reacted to your recent post <span class="category">5 end-game strategies to increase your win rate</span>
+          <span class="timespan">2 weeks ago</span>
+        </div>
+      </single-message>
+      <single-message
+        read="true">
+        <single-message-avatar
+          slot="avatar"
+          alt="Anna Kim avatar"
+          src="assets/images/avatar-anna-kim.webp"
+          >
+        </single-message-avatar>
+        <div slot="content">
+          <strong>Anna Kim</strong> left the group <span class="category">Chess Club</span>
+          <span class="timespan">2 weeks ago</span>
+        </div>
+      </single-message>
+    </section>
+  </main>
+  <script type="module" defer src="script.js"></script>
+</body>
+</html>

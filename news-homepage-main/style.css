@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+:root {
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  display: grid;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--soft-orange);
+}
+
+header {
+  display: grid;
+  grid-template: 100px / 100px 1fr;
+  align-items: center;
+  width: 100%;
+}
+
+.mobile-menu-icon {
+  display: block;
+  justify-self: end;
+}
+
+nav {
+  margin-left: auto;
+}
+
+nav > ul {
+  display: none;
+}
+
+nav > ul.visible {
+  background: white;
+  display: block;
+  width: 100%;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  padding: 1rem;
+  height: 80px;
+}
+
+nav > ul > li {
+  display: inline-block;
+}
+
+nav > ul > li:not(:last-of-type) {
+  margin-right: 1.5rem;
+}
+
+nav a {
+  color: var(--dark-grayish-blue);
+  font-weight: 400;
+}
+
+.main-article h1 {
+  font-size: 2.75rem;
+  font-weight: 800;
+  margin-top: 1rem;
+  line-height: 1;
+}
+
+.main-article p {
+  color: var(--dark-grayish-blue);
+  line-height: 1.6;
+}
+
+.main-article button {
+  background: var(--soft-red);
+  border: none;
+  color: var(--off-white);
+  cursor: pointer;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-top: 2rem;
+  padding: 1rem 1.75rem;
+}
+
+.main-article button:hover {
+  background: var(--very-dark-blue);
+}
+ 
+.main-image {
+  background-image: url("assets/images/image-web-3-mobile.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 320px;
+  grid-column: span 2;
+}
+
+aside {
+  grid-area: aside;
+  background: var(--very-dark-blue);
+  margin-bottom: 4rem;
+  padding: 0.25rem 1rem;
+}
+
+aside h1 {
+  color: var(--soft-orange);
+  font-size: 2rem;
+}
+
+aside h2 {
+  font-size: 1.25rem;
+}
+
+aside h2 > a {
+  color: var(--off-white);
+}
+
+aside h2:not(:first-of-type) {
+  padding-top: 1rem;
+}
+
+aside p {
+  color: var(--grayish-blue);
+  line-height: 1.75;
+}
+
+aside p:not(:last-of-type) {
+  border-bottom: 1px solid var(--grayish-blue);
+  padding-bottom: 2rem;
+}
+
+.article-summary {
+  display: grid;
+  grid-template-columns: 125px 1fr;
+  margin-bottom: 2rem;
+}
+
+.article-summary img {
+  grid-row: 1/ 4;
+}
+
+.article-summary h1 {
+  margin: 0;
+  margin-top: .5rem;
+}
+
+.article-summary h1,
+.article-summary p,
+.article-summary span {
+  grid-column: 2 / 3;
+}
+
+.article-summary span {
+  color: var(--grayish-blue);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.article-summary h1 {
+  font-size: 1rem;
+}
+
+.article-summary h1 > a {
+  color: var(--very-dark-blue);
+}
+
+.article-summary h1 > a:hover {
+  color: var(--soft-orange);
+}
+
+.article-summary p {
+  color: var(--dark-grayish-blue);
+  margin: 0;
+  font-size: .9rem;
+  line-height: 1.5;
+  margin-top: .5rem;
+}
+
+.article1 {
+  grid-area: article1;
+}
+
+.article2 {
+  grid-area: article2;
+}
+
+.article3 {
+  grid-area: article3;
+}
+
+@media screen and (min-width: 376px) {
+  body {
+    place-items: center;
+  }
+
+  header {
+    grid-template: 125px / 100px 1fr;
+    width: 75%;
+  }
+
+  .mobile-menu-icon {
+    display: none;
+  }
+
+  nav > ul {
+    display: block;
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  main {
+    display: grid;
+    grid-template: 1fr 100px / repeat(3, calc(33% - 20px));
+    grid-template-areas: 
+    "main-article main-article aside"
+    "article1 article2 article3"
+    ". . .";
+    gap: 40px;
+    width: 75%;
+  }
+
+  .main-article {
+    display: grid;
+    grid-area: main-article;
+    grid-column: span 2;
+    gap: 0 75px;
+    grid-template-columns: 40% 50%;
+  }
+
+  .main-article h1 {
+    font-size: 3.5rem;
+  }
+
+  .main-image {
+    background-image: url("assets/images/image-web-3-desktop.jpg");
+    height: 300px;
+    margin-bottom: 1rem;
+  }
+
+  aside {
+    padding: 0 2rem;
+    margin-bottom: 0;
+  }
+}

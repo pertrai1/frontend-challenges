@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+:root {
+  --red: hsl(0, 100%, 66%);
+  --white: hsl(0, 0%, 100%);
+  --light-grayish-violet: hsl(270, 3%, 87%);
+  --dark-grayish-violet: hsl(279, 6%, 55%);
+  --very-dark-violet: hsl(278, 68%, 11%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  margin: 0;
+}
+
+header {
+  background: url("images/bg-main-mobile.png") no-repeat;
+  height: 310px;
+  padding: 2rem 2rem 0;
+  position: relative;
+}
+
+main {
+  padding: 0 1.25rem;
+}
+
+.img-back {
+  background: url("images/bg-card-back.png") no-repeat;
+  background-size: contain;
+  position: relative;
+  transform: translate(50px, 0);
+  height: 150px;
+  width: 275px;
+
+  display: grid;
+  align-items: center;
+  justify-items: end;
+}
+
+.img-back span {
+  color: var(--white);
+  font-size: .65rem;
+  transform: translateX(-35px);
+}
+
+.img-front {
+  background: url("images/bg-card-front.png") no-repeat;
+  background-size: contain;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  color: var(--white);
+  display: grid;
+  grid-template-columns: 75% 25%;
+  padding: 1rem;
+  transform: translate(-15px, -65px);
+  height: 165px;
+  width: 300px;
+}
+
+.img-front span:nth-child(1) {
+  margin-bottom: 1rem;
+}
+
+.img-front span:nth-child(2) {
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  grid-column: span 2;
+  margin-bottom: 1rem;
+}
+
+.img-front span {
+  font-size: .8rem;
+}
+
+.img-front span img {
+  height: 30px;
+}
+
+.img-front span:last-of-type {
+  justify-self: end;
+}
+
+#credit-card-info {
+  margin-top: 1rem;
+}
+
+#credit-card-info div {
+  display: grid;
+  grid-template-columns: repeat(2, 48%);
+  column-gap: 15px;
+}
+
+#credit-card-info div label:first-of-type {
+  display: grid;
+  grid-template-columns: repeat(2, 49%);
+  column-gap: 10px;
+}
+
+#credit-card-info div label:first-of-type span {
+  grid-column: span 2;
+}
+
+label {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+input {
+  border: 1px solid var(--light-grayish-violet);
+  border-radius: 5px;
+  margin: 0.5rem 0 0.25rem;
+  padding: 0.75rem;
+  width: 100%;
+}
+
+input::placeholder {
+  color: var(--light-grayish-violet);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+input.error {
+  border-color: var(--red);
+}
+
+.field-error {
+  color: var(--red);
+  text-transform: initial;
+  letter-spacing: 0;
+  font-size: 0.75rem;
+}
+
+button {
+  background-color: var(--very-dark-violet);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--white);
+  font-size: 1.15rem;
+  padding: 1rem;
+  margin-top: 0.75rem;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+#success {
+  text-align: center;
+}
+
+#success h1 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+#success span {
+  color: var(--dark-grayish-violet);
+}
+
+#success button {
+  margin-top: 3rem;
+}
+
+@media screen and (min-width: 376px) {
+  body {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    min-height: 100vh;
+  }
+
+  header {
+    background: url("images/bg-main-desktop.png") no-repeat;
+    height: 100%;
+  }
+
+  .img-front {
+    padding: 1rem 1.5rem 0;
+    transform: translate(150px, -150px);
+    height: 200px;
+    width: 365px;
+  }
+
+  .img-front span:nth-child(1) {
+    margin-bottom: 2rem;
+  }
+
+  .img-front span:nth-child(2) {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+  
+  .img-front span img {
+    height: 40px;
+  }
+
+  .img-back {
+    transform: translate(250px, 275px);
+    height: 200px;
+    width: 365px;
+  }
+
+  .img-back span {
+    font-size: 0.75rem;
+    transform: translateX(-45px);
+  }
+
+  main {
+    display: grid;
+    place-items: center;
+  }
+
+  #credit-card-info {
+    margin-top: 5rem;
+    width: 40%;
+  }
+}

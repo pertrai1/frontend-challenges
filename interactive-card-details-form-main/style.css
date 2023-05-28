@@ -178,11 +178,13 @@ button {
   header {
     background: url("images/bg-main-desktop.png") no-repeat;
     height: 100%;
+    display: flex;
+    align-items: center;
   }
 
   .img-front {
     padding: 1rem 1.5rem 0;
-    transform: translate(150px, -150px);
+    transform: translate(150px, -230px);
     height: 200px;
     width: 365px;
   }
@@ -201,7 +203,7 @@ button {
   }
 
   .img-back {
-    transform: translate(250px, 275px);
+    transform: translate(250px, 205px);
     height: 200px;
     width: 365px;
   }

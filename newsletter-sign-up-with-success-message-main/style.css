@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --tomato: hsl(4, 100%, 67%);
+  --error: hsla(4deg 100% 67% / 20%);
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --charcoal-grey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto, sans-serif;
+  margin: 0;
+}
+
+main {
+  order: 1;
+  padding: 1rem 2rem;
+}
+
+aside {
+  background: url("assets/images/illustration-sign-up-mobile.svg") no-repeat;
+  height: 284px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 1.5rem;
+}
+
+form {
+  margin-top: 2rem;
+}
+
+li {
+  background: url("assets/images/icon-list.svg") no-repeat;
+  background-position-y: 3px;
+  line-height: 1.5;
+  padding-left: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-size: .8rem;
+  font-weight: 700;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#error-message {
+  color: var(--tomato);
+}
+
+input[type="email"] {
+  border: 1px solid var(--grey);
+  border-radius: 5px;
+  display: block;
+  flex: 1 0 100%;
+  padding: 0.75rem 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+button {
+  background: var(--dark-slate-grey);
+  border: none;
+  border-radius: 5px;
+  color: var(--white);
+  font-size: 1rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+a {
+  color: var(--dark-slate-grey);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+.error {
+  background-color: var(--error);
+  border: 1px solid var(--tomato) !important;
+}
+
+@media screen and (min-width: 376px) {
+  body {
+    flex-direction: row-reverse;
+    margin: 0 auto;
+    padding: 2rem;
+    width: 65%;
+  }
+
+  aside {
+    background: url("assets/images/illustration-sign-up-desktop.svg") no-repeat;
+    height: 593px;
+    width: 100%;
+  }
+
+  main {
+    flex: 1 0 50%;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+  }
+
+  input[type="email"] {
+    padding: 1rem 1.5rem;
+  }
+
+  #success {
+    margin: 0 auto;
+    width: 25%;
+}

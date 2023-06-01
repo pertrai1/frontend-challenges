@@ -51,9 +51,9 @@ header {
 }
 
 .container {
-  background-color: var(--white);
+  background-color: var(--very-pale-orange);
   border-radius: 10px;
-  padding: 1rem;
+  padding: 1.5rem;
   margin-top: 1rem;
 }
 
@@ -83,11 +83,11 @@ header {
 }
 
 .bar-high {
-  background-color: var(--soft-red);
+  background-color: var(--cyan);
 }
 
 .bar-low {
-  background-color: var(--cyan);
+  background-color: var(--soft-red);
 }
 
 .tooltip {
@@ -129,5 +129,19 @@ footer {
 }
 
 @media screen and (min-width: 376px) {
+  .container {
+    padding: 1.5rem 2rem;
+  }
 
+  .chart {
+    gap: 15px;
+  }
+
+  .chart > div {
+    width: 50px;
+  }
+
+  .total-amount {
+    font-size: 2.5rem;
+  }
 }

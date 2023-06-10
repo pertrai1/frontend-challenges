@@ -116,9 +116,11 @@ button img {
   }
 
   .product-image {
+    background: url("images/image-product-desktop.jpg") no-repeat;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     background-position: center;
+    background-size: contain;
     height: auto;
   }
 }

@@ -120,7 +120,7 @@ button img {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     height: auto;
   }
 }

@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--pale-blue);
+  font-family: "Red Hat Display", sans-serif;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+article {
+  background-color: var(--white);
+  border-radius: 20px;
+  width: 325px;
+}
+
+header {
+  background: url("images/illustration-hero.svg") no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 160px;
+}
+
+main {
+  padding: 1rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.25rem;
+}
+
+p {
+  color: var(--desaturated-blue);
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 0 1rem;
+}
+
+.plan-details {
+  background-color: var(--very-pale-blue);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plan-details__icon {
+  width: 10px;
+}
+
+.plan-details__plan {
+  display: block;
+  font-weight: bold;
+}
+
+.plan_details__price {
+  color: var(--desaturated-blue);
+}
+
+.plan-details__options {
+  font-weight: bold;
+}
+
+.plan-details__options a:hover {
+  color: var(--desaturated-blue);
+  text-decoration: none;
+}
+
+footer {
+  font-size: 0.9rem;
+  padding: 0 1rem 2rem;
+  text-align: center;
+}
+
+footer button {
+  background-color: var(--bright-blue);
+  border-radius: 10px;
+  box-shadow: 0 15px 10px var(--pale-blue);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: bold;
+  display: block;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 1.25rem;
+  width: 100%;
+}
+
+footer a {
+  color: var(--desaturated-blue);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--dark-blue);
+}
+
+@media screen and (min-width: 376px) {
+  article {
+    width: 450px;
+  }
+
+  header {
+    height: 220px;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  main {
+    padding: 1rem 3rem;
+  }
+
+  .plan-details {
+    padding: 1rem 3rem;
+  }
+
+  .plan-details__name {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  footer {
+    padding: 1rem 3rem 2rem;
+  }
+}

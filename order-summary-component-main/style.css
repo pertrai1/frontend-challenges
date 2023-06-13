@@ -13,11 +13,17 @@
   --desaturated-blue: hsl(224, 23%, 55%);
   --dark-blue: hsl(223, 47%, 23%);
   --white: hsl(0, 0%, 100%);
+
+  --breakpoint-small: 376px;
+
+  --font-family: "Red Hat Display", sans-serif;
+
+  --border-radius: 10px;
 }
 
 body {
   background-color: var(--pale-blue);
-  font-family: "Red Hat Display", sans-serif;
+  font-family: var(--font-family);
   display: grid;
   place-items: center;
   min-height: 100vh;
@@ -56,7 +62,7 @@ p {
 
 .plan-details {
   background-color: var(--very-pale-blue);
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   font-size: 0.9rem;
   padding: 1rem;
   display: flex;
@@ -70,13 +76,13 @@ p {
 
 .plan-details__plan {
   display: block;
-  font-weight: bold;
 }
 
 .plan_details__price {
   color: var(--desaturated-blue);
 }
 
+.plan-details__plan,
 .plan-details__options {
   font-weight: bold;
 }
@@ -94,7 +100,7 @@ footer {
 
 footer button {
   background-color: var(--bright-blue);
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   box-shadow: 0 15px 10px var(--pale-blue);
   color: var(--white);
   font-size: 1rem;
@@ -117,7 +123,7 @@ footer a:hover {
   color: var(--dark-blue);
 }
 
-@media screen and (min-width: 376px) {
+@media (min-width: var(--breakpoint-small)) {
   article {
     width: 450px;
   }
@@ -130,10 +136,7 @@ footer a:hover {
     font-size: 1.75rem;
   }
 
-  main {
-    padding: 1rem 3rem;
-  }
-
+  main,
   .plan-details {
     padding: 1rem 3rem;
   }

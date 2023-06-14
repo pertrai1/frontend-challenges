@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --very-dark-gray: hsl(0, 0%, 17%);
+  --dark-gray: hsl(0, 0%, 59%);
+  --white: hsl(0, 0%, 100%);
+
+
+  --font-family: Rubik, sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+header {
+  background: url("images/pattern-bg-mobile.png") no-repeat;
+  padding: 1.5rem 2rem 10rem;
+  position: relative;
+}
+
+header h1 {
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.search {
+  display: flex;
+}
+
+.search input {
+  border: none;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  padding: 1rem;
+  width: 100%;
+}
+
+.search input,
+.search input::placeholder {
+  font-size: 1rem;
+}
+
+.search button {
+  background-color: var(--very-dark-gray);
+  border: none;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 1rem 1.25rem;
+}
+
+aside {
+  background: var(--white);
+  border-radius: 15px;
+  display: none;
+  flex-direction: column;
+  min-height: 275px;
+  position: absolute;
+  transform: translate(3px, 30px);
+  padding: 1.25rem;
+  text-align: center;
+  width: 82%;
+  z-index: 1000;
+}
+
+aside > div {
+  margin-bottom: 1rem;
+}
+
+aside span:nth-child(odd) {
+  color: var(--dark-gray);
+  font-size: 0.8rem;
+  margin-bottom: .5rem;
+  text-transform: uppercase;
+  display: block;
+}
+
+aside span:nth-child(even) {
+  color: var(--very-dark-gray);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+#map {
+  height: calc(100vh - 295px);
+}
+
+@media screen and (min-width: 376px) {
+  header {
+    background: url("images/pattern-bg-desktop.png") no-repeat;
+    background-size: cover;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .search {
+    margin: 0 auto;
+    max-width: 40%;
+  }
+
+  .search input,
+  .search input::placeholder {
+    font-size: 1.25rem;
+  }
+
+  aside {
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 150px;
+    padding: 2rem;
+    text-align: left;
+    transform: translate(15%, 60px);
+    width: 75%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .2);
+  }
+
+  aside span:nth-child(odd) {
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  aside span:nth-child(even) {
+    font-size: 1.75rem;
+  }
+
+  aside .separator {
+    background-color: var(--dark-gray);
+    align-self: end;
+    height: 50px;
+    width: 1px;
+  }
+}
+

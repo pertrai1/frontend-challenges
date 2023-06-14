@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <script defer src='https://unpkg.com/maplibre-gl@3.0.1/dist/maplibre-gl.js'></script>
+  <link href='https://unpkg.com/maplibre-gl@3.0.1/dist/maplibre-gl.css' rel='stylesheet' />
+  
+</head>
+<body>
+
+  <header>
+    <h1>IP Address Tracker</h1>
+    <div class="search">
+      <input type="text" id="search" name="search" placeholder="Search for any IP address or domain" />
+      <button type="button" class="search-btn">
+        <img src="images/icon-arrow.svg" alt="Search" />
+      </button>
+    </div>
+    <aside></aside>
+  </header>
+  <main>
+    <section id="map"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

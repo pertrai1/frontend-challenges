@@ -32,7 +32,7 @@ header {
 
 header h1 {
   color: var(--white);
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 500;
   margin-bottom: 2rem;
   text-align: center;
@@ -46,7 +46,7 @@ header h1 {
   border: none;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
-  padding: 1rem;
+  padding: 1rem 1.25rem;
   width: 100%;
 }
 

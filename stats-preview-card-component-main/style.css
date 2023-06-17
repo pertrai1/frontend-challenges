@@ -43,7 +43,8 @@ body {
 .card-image {
   background: var(--soft-violet) url("images/image-header-mobile.jpg") no-repeat;
   background-size: contain;
-  background-blend-mode: overlay;
+  background-blend-mode: multiply;
+  opacity: 0.8;
   width: 325px;
   height: 238px;
 }
@@ -115,7 +116,8 @@ ul > li {
   .card-image {
     background: var(--soft-violet) url("images/image-header-desktop.jpg") no-repeat;
     background-size: cover;
-    background-blend-mode: overlay;
+    background-blend-mode: multiply;
+    opacity: 0.8;
     width: 550px;
     height: auto;
   }

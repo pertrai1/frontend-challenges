@@ -109,8 +109,9 @@ p {
 
 @media screen and (min-width: 376px) {
   section {
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
     flex-direction: row;
-    padding: 1.5rem;
+    padding: 2rem 1.5rem 3.5rem;
     width: 920px;
     max-width: 920px;
   }
@@ -118,7 +119,7 @@ p {
   .illustrations {
     position: relative;
     left: -12%;
-    top: 0;
+    top: 15px;
     width: 50%;
   }
 

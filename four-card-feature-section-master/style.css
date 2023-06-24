@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  /*Primary*/
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  
+  /*Neutral*/
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+
+body {
+  background-color: var(--very-light-gray);
+  color: var(--grayish-blue);
+  font-family: Poppins, sans-serif;
+  font-size: 15px;
+  padding: 1rem 2rem;
+
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  color: var(--grayish-blue);
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.bold {
+  color: var(--very-dark-blue);
+  font-weight: 600;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+
+.card {
+  border-radius: 5px;
+  box-shadow: 0 20px 15px hsl(229 6% 66% / 20%);
+  min-height: 225px;
+  padding: 1rem 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.card h1 {
+  color: var(--very-dark-blue);
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.card p {
+  font-size: 0.8rem;
+}
+
+.supervisor {
+  background: url(images/icon-supervisor.svg) 225px 150px no-repeat #fff;
+  background-size: 48px 48px;
+  border-top: 4px solid var(--cyan);
+}
+
+.builder {
+  background: url(images/icon-team-builder.svg) 225px 150px no-repeat #fff;
+  background-size: 48px 48px;
+  border-top: 4px solid var(--red);
+}
+
+.karma {
+  background: url(images/icon-karma.svg) 225px 150px no-repeat #fff;
+  background-size: 48px 48px;
+  border-top: 4px solid var(--orange);
+}
+
+.calculator {
+  background: url(images/icon-calculator.svg) 225px 150px no-repeat #fff;
+  background-size: 48px 48px;
+  border-top: 4px solid var(--blue);
+}
+
+@media screen and (min-width: 376px) {
+  body {
+    padding: 5rem;
+  }
+
+  main {
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+  }
+
+  header h1 {
+    font-size: 2.25rem;
+    line-height: 1.4;
+  }
+
+  header p {
+    font-size: 0.9rem;
+    max-width: 60%;
+    margin: 0 auto;
+  }
+
+  main {
+    margin-top: 4rem;
+  }
+
+  .card {
+    padding: 1.5rem 1.75rem;
+    max-width: 350px;
+    min-height: 250px;
+  }
+
+  .supervisor,
+  .builder,
+  .karma,
+  .calculator {
+    background-position: 250px 150px;
+    background-size: 64px 64px;
+  }
+
+}

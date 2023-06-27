@@ -99,6 +99,7 @@ main {
 
 @media screen and (min-width: 480px) {
   body {
+    background: url(images/bg-desktop.svg) no-repeat var(--violet);
     padding: 3rem 5rem;
   }
 

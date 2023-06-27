@@ -1,0 +1,180 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  /*### Primary*/
+  --cyan: hsl(179, 62%, 43%);
+  --cyan-h: 179;
+  --cyan-s: 62%;
+  --cyan-l: 43%;
+
+  --bright-yellow: hsl(71, 73%, 54%);
+
+  /*### Neutral*/
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+  --white: hsl(0 0% 100%);
+
+  --font-family: 'Karla', sans-serif;
+
+  --section-padding-desktop: 2.5rem 2.5rem 2rem 2.5rem;
+  --section-padding-mobile: 1.5rem;
+}
+
+body {
+  background-color: var(--light-gray);
+  font-family: var(--font-family);
+  font-size: 16px;
+
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.single {
+  background-color: var(--white);
+  box-shadow: 0 10px 20px hsl(0 0% 0% / 10%);
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "community community" "subscription perks";
+  margin-top: 1rem;
+  width: 43%;
+}
+
+.single__community {
+  grid-area: community;
+}
+
+.single__community,
+.single__subscription,
+.single__perks {
+  padding: var(--section-padding-desktop);
+}
+
+.single__subscription,
+.single__perks {
+  background-color: hsl(var(--cyan-h), var(--cyan-s), var(--cyan-l));
+  color: var(--white);
+}
+
+.single__community h1,
+.single__subscription h1,
+.single__perks h1 {
+  font-size: 1.5rem;
+}
+
+.single__subscription h1,
+.single__perks h1 {
+  font-size: 1.15rem;
+}
+
+.single__subscription h1,
+.single__perks h1 {
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.single__community h1 {
+  margin-bottom: 1.25rem;
+}
+
+.single__community h2 {
+  margin-bottom: 0.75rem;
+}
+
+.single__community h1 {
+  color: var(--cyan);
+}
+
+.single__community h2 {
+  color: var(--bright-yellow);
+  font-size: 1rem;
+}
+
+.single__community p {
+  color: var(--grayish-blue);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.single__subscription h2 {
+  margin-bottom: 1rem;
+}
+
+.single__subscription p {
+  margin-bottom: 1.75rem;
+}
+
+.cost {
+  display: flex;
+  gap: 10px;
+}
+
+.cost h2 {
+  font-size: 2rem;
+}
+
+.cost__sub {
+  padding-top: 0.5rem;
+}
+.single__subscription button {
+  background-color: var(--bright-yellow);
+  box-shadow: 0 10px 10px hsl(0 0% 0% / 10%);
+  border: none;
+  border-radius: 5px;
+  color: var(--white);
+  font-size: 1rem;
+  padding: 0.75rem;
+  width: 100%;
+}
+
+.single__perks {
+  --cyan-l: 47%;
+}
+
+.single__perks ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.single__perks li {
+  font-size: 0.9rem;
+  padding-bottom: 0.25rem;
+}
+
+@media screen and (max-width: 375px) {
+  .single {
+    grid-template-columns: 1fr;
+    grid-template-areas: "community" "subscription" "perks";
+    width: 85%;
+  }
+
+  .single__community,
+  .single__subscription,
+  .single__perks {
+    padding: var(--section-padding-mobile);
+  }
+
+  .single__community h1,
+  .single__subscription h1,
+  .single__perks h1 {
+    font-size: 1.15rem;
+  }
+
+  .single__community h1,
+  .single__community h2 {
+    margin-bottom: 1.25rem;
+  }
+
+  .single__community p {
+    font-size: 0.9rem;
+  }
+}

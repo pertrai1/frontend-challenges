@@ -1,0 +1,176 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  /*### Primary*/
+  --blue: hsl(223, 87%, 63%);
+
+  /*### Secondary*/
+  --pale-blue: hsl(223, 100%, 88%);
+  --light-red: hsl(354, 100%, 66%);
+
+  /*### Neutral*/
+  --gray: hsl(0, 0%, 59%);
+  --very-dark-blue: hsl(209, 33%, 12%);
+
+  --body-font-size: 20px;
+  --font-family: 'Libre Franklin', sans-serif;
+}
+
+body {
+  font-size: var(--body-font-size);
+  font-family: var(--font-family);
+
+  display: grid;
+  justify-items: center;
+}
+
+header {
+  margin-top: 5rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 10rem;
+}
+
+h1 {
+  color: var(--gray);
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-top: 2rem;
+}
+
+p {
+  font-size: 1rem;
+  margin: 1rem 0 2rem;
+}
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="email"],
+.notify-btn {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+input[type="email"] {
+  border: 1px solid var(--pale-blue);
+  border-radius: 30px;
+  padding: 1rem 2rem;
+  margin-bottom: 0.5rem;
+  width: 90%;
+}
+
+input[type="email"]::placeholder {
+  color: var(--pale-blue);
+  font-size: 1rem;
+}
+
+.notify-btn {
+  color: #fff;
+  background-color: var(--blue);
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 10px 10px hsl(223 100% 88% / 50%);
+  font-size: 1rem;
+  padding: 1rem;
+  margin-bottom: 5rem;
+  margin-top: 1.5rem;
+}
+
+.error {
+  color: var(--light-red);
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.display-none {
+  display: none;
+}
+
+.bold {
+  color: var(--very-dark-blue);
+  font-weight: 700;
+}
+
+.illustration {
+  height: 210px;
+}
+
+.social-sharing {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 2rem;
+}
+
+.social-btn {
+  background: transparent;
+  border: 1px solid var(--pale-blue);
+  border-radius: 50%;
+  padding: 0.6rem 0;
+  height: 30px;
+  width: 30px;
+}
+
+.fa-sm {
+  color: var(--blue);
+  font-size: 1rem !important;
+}
+
+footer {
+  color: var(--gray);
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 376px) {
+  body {
+    align-content: flex-start;
+  }
+
+  main {
+    width: 65%;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+  }
+
+  .illustration {
+    height: 50%;
+  }
+
+  .subscribe {
+    flex-direction: row;
+  }
+
+  input[type="email"] {
+    margin-right: 0;
+    width: 95%;
+  }
+
+  .subscribe__input {
+    width: 70%;
+  }
+
+  .notify-btn {
+    margin-top: 0;
+    width: 30%;
+  }
+}

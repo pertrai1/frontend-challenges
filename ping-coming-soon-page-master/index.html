@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Ping coming soon page</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/8b23f926c0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <img src="images/logo.svg" alt="logo" />
+  </header>
+  <main>
+    <h1>We are launching <span class="bold">soon!</span></h1>
+
+    <p>Subscribe and get notified</p>
+
+    <section class="subscribe">
+      <div class="subscribe__input">
+        <input type="email" name="email-address" placeholder="Your email address..." required />
+        <div class="error error-empty display-none">Whoops! It looks like you forgot to add your email</div>
+        <div class="error error-invalid display-none">Please provide a valid email address</div>
+      </div>
+      <button type="button" class="notify-btn">Notify Me</button>
+    </section>
+    <img src="images/illustration-dashboard.png" alt="dashboard illustration" class="illustration" />
+  </main>
+  <footer>
+    <section class="social-sharing">
+      <button type="button" class="social-btn">
+        <i class="fa-brands fa-facebook-f fa-sm"></i>
+      </button>
+      <button type="button" class="social-btn">
+        <i class="fa-brands fa-twitter fa-sm"></i>
+      </button>
+      <button type="button" class="social-btn">
+        <i class="fa-brands fa-instagram fa-sm"></i>
+      </button>
+    </section>
+    &copy; Copyright Ping. All rights reserved.
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

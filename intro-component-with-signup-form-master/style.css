@@ -171,6 +171,9 @@ button {
 }
 
 @media screen and (min-width: 37.5em) {
+  body {
+    background: url(images/bg-intro-desktop.png) no-repeat var(--red);
+  }
   main {
     align-items: center;
     flex-direction: row;

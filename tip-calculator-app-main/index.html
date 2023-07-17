@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <img src="images/logo.svg" alt="logo" />
+  </header>
+  <main>
+    <form>
+      <section class="calculator-lhs">
+        <label for="bill">Bill</label>
+        <input type="number" name="bill" id="bill" />
+
+        <h2>Select Tip %</h2>
+        <div class="buttons">
+          <button type="button" data-tip="5">5%</button>
+          <button type="button" data-tip="10">10%</button>
+          <button type="button" data-tip="15">15%</button>
+          <button type="button" data-tip="25">25%</button>
+          <button type="button" data-tip="50">50%</button>
+          <input type="number" name="custom-tip" id="custom-tip" />
+        </div>
+
+        <label for="num-people">Number of People<span id="people-error">Can't be zero</span></label>
+        <input type="number" id="num-people">
+      </section>
+
+      <section class="calculator-rhs">
+
+        <div>
+          <div class="amount">
+            <div>
+              <h2>Tip Amount</h2>
+              <span>/ person</span>
+            </div>
+            <div>
+              <span class="dollars" id="tip-amount">$0.00</span>
+            </div>
+          </div>
+
+          <div class="amount">
+            <div>
+              <h2>Total</h2>
+              <span>/ person</span>
+            </div>
+            <div>
+              <span class="dollars" id="total-amount">$0.00</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div>
+          <button type="button" class="btn-reset">Reset</button>
+        </div>
+      </section>
+    </form>
+  </main> 
+  <script src="script.js"></script>
+</body>
+</html>

@@ -10,29 +10,38 @@
       href="./images/favicon-32x32.png"
     />
     <title>Frontend Mentor | Loopstudios landing page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
-      <img src="./images/logo.svg" alt="Loopstudios logo" />
-      <nav>
-        <ul>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Careers</a>
-          </li>
-          <li>
-            <a href="#">Events</a>
-          </li>
-          <li>
-            <a href="#">Products</a>
-          </li>
-          <li>
-            <a href="#">Support</a>
-          </li>
-        </ul>
-      </nav>
+      <div>
+        <img src="./images/logo.svg" alt="Loopstudios logo" />
+        <nav>
+          <ul>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Careers</a>
+            </li>
+            <li>
+              <a href="#">Events</a>
+            </li>
+            <li>
+              <a href="#">Products</a>
+            </li>
+            <li>
+              <a href="#">Support</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
       <h1>Immersive experiences that deliver</h1>
     </header>
     <main>
@@ -45,21 +54,19 @@
           experiences that bind to their brand.
         </p>
       </section>
-      <section>
+      <section class="creations">
         <h1>Our creations</h1>
         <button type="button">See all</button>
-        <div>
-          <ul>
-            <li>Deep earth</li>
-            <li>Night arcade</li>
-            <li>Soccer team VR</li>
-            <li>The grid</li>
-            <li>From up above VR</li>
-            <li>Pocket borealis</li>
-            <li>The curiosity</li>
-            <li>Make it fisheye</li>
-          </ul>
-        </div>
+        <ul class="creations__list">
+          <li data-creation="deep-earth"><span>Deep earth</span></li>
+          <li data-creation="night-arcade"><span>Night arcade</span></li>
+          <li data-creation="soccer-team"><span>Soccer team VR</span></li>
+          <li data-creation="grid"><span>The grid</span></li>
+          <li data-creation="from-above-vr"><span>From up above VR</span></li>
+          <li data-creation="pocket-borealis"><span>Pocket borealis</span></li>
+          <li data-creation="curiosity"><span>The curiosity</span></li>
+          <li data-creation="make-it-fisheye"><span>Make it fisheye</span></li>
+        </ul>
       </section>
     </main>
     <footer>

@@ -1,0 +1,121 @@
+@layer global, header, main, creations;
+
+@layer global {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  :root {
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --dark-gray: hsl(0, 0%, 55%);
+    --very-dark-gray: hsl(0, 0%, 41%);
+    --primary-font: "Alata", sans-serif;
+    --secondary-font: "Josefin Sans", sans-serif;
+  }
+
+  body {
+    font-family: var(--primary-font);
+  }
+}
+
+@layer header {
+  header {
+    background-image: url("images/desktop/image-hero.jpg");
+    background-size: cover;
+  }
+
+  header {
+    padding: 2rem;
+    > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav ul {
+      display: flex;
+    }
+
+    nav ul li {
+      list-style: none;
+      margin-right: 1.5rem;
+    }
+
+    nav ul li a {
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    h1 {
+      border: 2px solid var(--white);
+      color: var(--white);
+      font-size: 3rem;
+      font-weight: lighter;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      letter-spacing: 0.5rem;
+      padding: 1rem;
+      max-width: 500px;
+      text-transform: uppercase;
+      width: 100%;
+    }
+  }
+}
+
+@layer main {
+  main {
+    padding: 2rem;
+  }
+}
+
+@layer creations {
+  .creations {
+    .creations__list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      list-style-type: none;
+    }
+
+    .creations__list li {
+      background-repeat: no-repeat;
+      min-height: 450px;
+      position: relative;
+    }
+  }
+
+  [data-creation="deep-earth"] {
+    background-image: url("images/desktop/image-deep-earth.jpg");
+  }
+
+  [data-creation="night-arcade"] {
+    background-image: url("images/desktop/image-night-arcade.jpg");
+  }
+
+  [data-creation="soccer-team"] {
+    background-image: url("images/desktop/image-soccer-team.jpg");
+  }
+
+  [data-creation="grid"] {
+    background-image: url("images/desktop/image-grid.jpg");
+  }
+
+  [data-creation="from-above-vr"] {
+    background-image: url("images/desktop/image-from-above.jpg");
+  }
+
+  [data-creation="pocket-borealis"] {
+    background-image: url("images/desktop/image-pocket-borealis.jpg");
+  }
+
+  [data-creation="curiosity"] {
+    background-image: url("images/desktop/image-curiosity.jpg");
+  }
+
+  [data-creation="make-it-fisheye"] {
+    background-image: url("images/desktop/image-fisheye.jpg");
+  }
+}

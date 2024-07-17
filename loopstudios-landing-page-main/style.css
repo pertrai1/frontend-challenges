@@ -1,4 +1,4 @@
-@layer global, header, main, creations;
+@layer global, header, main, creations, footer;
 
 @layer global {
   * {
@@ -33,6 +33,9 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
     }
 
     nav ul {
@@ -67,7 +70,10 @@
 
 @layer main {
   main {
-    padding: 2rem;
+    padding: 2rem 0;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 
@@ -75,7 +81,7 @@
   .creations {
     .creations__list {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(242px, 1fr));
       gap: 2rem;
       list-style-type: none;
     }
@@ -84,6 +90,20 @@
       background-repeat: no-repeat;
       min-height: 450px;
       position: relative;
+      padding-top: 350px;
+      padding-left: 1.5rem;
+    }
+
+    .creations__list li span {
+      color: var(--white);
+      display: block;
+      font-family: var(--secondary-font);
+      font-size: 2rem;
+      font-weight: 300;
+      line-height: 1;
+      text-transform: uppercase;
+      width: 175px;
+      font-weight: 300;
     }
   }
 
@@ -117,5 +137,51 @@
 
   [data-creation="make-it-fisheye"] {
     background-image: url("images/desktop/image-fisheye.jpg");
+  }
+}
+
+@layer footer {
+  footer {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 2rem;
+  }
+
+  footer ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+
+  footer ul li {
+    display: inline-block;
+  }
+
+  footer > div {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer nav ul {
+    margin-top: 1rem;
+  }
+
+  footer nav ul li {
+    margin-right: 2rem;
+  }
+
+  footer nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .social-media__icons li {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
   }
 }

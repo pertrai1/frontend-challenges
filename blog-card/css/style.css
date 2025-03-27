@@ -1,0 +1,92 @@
+/* Put any custom CSS styles here.  */
+/* Be sure to delete the <style> tag in index.html if you want to use this stylesheet. */
+body {
+  margin: 0;
+  font-family: "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  min-height: 100vh;
+
+  background: linear-gradient(to bottom, #fff, #d1d5db);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  max-width: 100%;
+}
+
+.card-wrapper {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  margin-top: 120px;
+  min-width: 340px;
+  max-width: 340px;
+  width: 100%;
+
+  img {
+    height: 288px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.card-content {
+  padding: 1rem;
+  padding-bottom: 2rem;
+
+  h1 {
+    margin-top: 0.5rem;
+  }
+
+  p {
+    line-height: 1.4;
+    color: hsl(0deg 0% 33.73%);
+    font-weight: 600;
+    padding-bottom: 0.75rem;
+  }
+
+  a {
+    color: #4338ca;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
+
+.pill {
+  background-color: rgb(239 253 244);
+  border: 1px solid rgb(205 249 221);
+  border-radius: 16px;
+  color: rgb(26 130 63);
+  font-size: 0.9rem;
+  padding: 0.25rem;
+  text-align: center;
+  width: 75px;
+}
+
+.credits {
+  color: #777;
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.credits a {
+  color: #000;
+  font-weight: bold;
+}

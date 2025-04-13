@@ -1,173 +1,181 @@
-:root {
-  --brand: #4338ca;
-  --secondary: #fff;
-  --destructive: #dc2626;
+@layer base, button, credits;
 
-  --clr-secondary: #151515;
-  --clr-tertiary: #4947a7;
-  --clr-links: #4234c6;
+@layer base {
+  :root {
+    --brand: #4338ca;
+    --secondary: #fff;
+    --destructive: #dc2626;
 
-  --pad-regular: 1rem;
-  --pad-normal: 0.8;
-  --pad-large: 0.8;
-  --pad-x-large: 0.9;
-  --pad-xx-large: 1;
+    --clr-secondary: #151515;
+    --clr-tertiary: #4947a7;
+    --clr-links: #4234c6;
 
-  --fnt-regular: 0.8rem;
-  --fnt-large: 1;
-  --fnt-x-large: 1.1;
-  --fnt-xx-large: 1.15;
-}
-body {
-  margin: 0;
-  font-family: "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-    sans-serif;
-  min-height: 100vh;
+    --pad-regular: 1rem;
+    --pad-normal: 0.8;
+    --pad-large: 0.8;
+    --pad-x-large: 0.9;
+    --pad-xx-large: 1;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+    --fnt-regular: 0.8rem;
+    --fnt-large: 1;
+    --fnt-x-large: 1.1;
+    --fnt-xx-large: 1.15;
+  }
+  body {
+    margin: 0;
+    font-family: "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;
+    min-height: 100vh;
 
-* {
-  box-sizing: border-box;
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-button {
-  font: inherit;
-}
-
-.btn-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.25rem;
-
-  margin-bottom: 3rem;
+  * {
+    box-sizing: border-box;
+  }
 }
 
-.btn {
-  border: none;
-  border-radius: 4px;
-  outline: none;
-  cursor: pointer;
-
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
-
-  .icon-left,
-  .icon-right {
-    height: 12px;
+@layer button {
+  button {
+    font: inherit;
   }
 
-  .btn-text {
-    padding-inline: 0.25rem;
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+
+    margin-bottom: 3rem;
   }
 
-  &[data-variant="primary"] {
-    background-color: var(--brand);
-    color: #fff;
-  }
+  .btn {
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
 
-  &[data-variant="secondary"] {
-    color: var(--clr-secondary);
-    background-color: var(--secondary);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 
-    polygon {
-      stroke: var(--clr-secondary);
-    }
-  }
-
-  &[data-variant="tertiary"] {
-    color: var(--clr-tertiary);
-    box-shadow: none;
-
-    polygon {
-      stroke: var(--clr-tertiary);
-    }
-  }
-
-  &[data-variant="link"] {
-    color: var(--clr-links);
-    box-shadow: none;
-    padding: 0 !important;
-
-    polygon {
-      stroke: var(--clr-links);
-    }
-  }
-
-  &[data-variant="tertiary"],
-  &[data-variant="link"] {
-    background-color: transparent;
-  }
-
-  &[data-variant="destructive"] {
-    background-color: var(--destructive);
-    color: #fff;
-  }
-
-  &[data-size="medium"] {
-    font-size: calc(var(--fnt-regular) * var(--fnt-large));
-    padding: calc(var(--pad-regular) * var(--pad-normal));
-  }
-
-  &[data-size="large"] {
-    font-size: calc(var(--fnt-regular) * var(--fnt-large));
-    padding: calc(var(--pad-regular) * var(--pad-large));
-  }
-
-  &[data-size="x-large"] {
-    font-size: calc(var(--fnt-regular) * var(--fnt-x-large));
-    padding: calc(var(--pad-regular) * var(--pad-x-large));
-  }
-
-  &[data-size="xx-large"] {
-    font-size: calc(var(--fnt-regular) * var(--fnt-xx-large));
-    padding: calc(var(--pad-regular) * var(--pad-xx-large));
-  }
-
-  &[data-icon-position="none"] {
     .icon-left,
     .icon-right {
-      display: none;
+      height: 12px;
     }
-  }
 
-  &[data-icon-position="left"] {
-    .icon-right {
-      display: none;
-    }
-  }
-
-  &[data-icon-position="right"] {
-    .icon-left {
-      display: none;
-    }
-  }
-
-  &[data-icon-only="true"] {
-    .icon-left {
-      display: block;
-      height: 18px;
-    }
     .btn-text {
-      display: none;
+      padding-inline: 0.25rem;
+    }
+
+    &[data-variant="primary"] {
+      background-color: var(--brand);
+      color: #fff;
+    }
+
+    &[data-variant="secondary"] {
+      color: var(--clr-secondary);
+      background-color: var(--secondary);
+
+      polygon {
+        stroke: var(--clr-secondary);
+      }
+    }
+
+    &[data-variant="tertiary"] {
+      color: var(--clr-tertiary);
+      box-shadow: none;
+
+      polygon {
+        stroke: var(--clr-tertiary);
+      }
+    }
+
+    &[data-variant="link"] {
+      color: var(--clr-links);
+      box-shadow: none;
+      padding: 0 !important;
+
+      polygon {
+        stroke: var(--clr-links);
+      }
+    }
+
+    &[data-variant="tertiary"],
+    &[data-variant="link"] {
+      background-color: transparent;
+    }
+
+    &[data-variant="destructive"] {
+      background-color: var(--destructive);
+      color: #fff;
+    }
+
+    &[data-size="medium"] {
+      font-size: calc(var(--fnt-regular) * var(--fnt-large));
+      padding: calc(var(--pad-regular) * var(--pad-normal));
+    }
+
+    &[data-size="large"] {
+      font-size: calc(var(--fnt-regular) * var(--fnt-large));
+      padding: calc(var(--pad-regular) * var(--pad-large));
+    }
+
+    &[data-size="x-large"] {
+      font-size: calc(var(--fnt-regular) * var(--fnt-x-large));
+      padding: calc(var(--pad-regular) * var(--pad-x-large));
+    }
+
+    &[data-size="xx-large"] {
+      font-size: calc(var(--fnt-regular) * var(--fnt-xx-large));
+      padding: calc(var(--pad-regular) * var(--pad-xx-large));
+    }
+
+    &[data-icon-position="none"] {
+      .icon-left,
+      .icon-right {
+        display: none;
+      }
+    }
+
+    &[data-icon-position="left"] {
+      .icon-right {
+        display: none;
+      }
+    }
+
+    &[data-icon-position="right"] {
+      .icon-left {
+        display: none;
+      }
+    }
+
+    &[data-icon-only="true"] {
+      .icon-left {
+        display: block;
+        height: 18px;
+      }
+      .btn-text {
+        display: none;
+      }
     }
   }
 }
 
-.credits {
-  color: #777;
-  position: fixed;
-  bottom: 24px;
-  left: 24px;
-  font-size: 11px;
-  text-align: center;
-}
+@layer credits {
+  .credits {
+    color: #777;
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    font-size: 11px;
+    text-align: center;
+  }
 
-.credits a {
-  color: #000;
-  font-weight: bold;
+  .credits a {
+    color: #000;
+    font-weight: bold;
+  }
 }

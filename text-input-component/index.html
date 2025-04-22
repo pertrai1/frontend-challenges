@@ -12,22 +12,63 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
-
-    <!-- Tailwind CDN allows you to use Tailwind classes immediately in your HTML without any installation steps. 
-      If you're not using Tailwind, you may delete the <script> -->
-    <!-- Get started on Tailwind: https://tailwindcss.com/docs/installation/play-cdn -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <link rel="icon" href="img/favicon.ico" sizes="any" />
     <style>
-      /* You may write styles inside this <style> tag or within `css/style.css`. */
+      body {
+        font-family: "Inter", sans-serif;
+        background: #f9fafb;
+        padding: 2rem;
+        max-width: 400px;
+        margin: auto;
+      }
+
+      text-input {
+        display: block;
+        margin-bottom: 2rem;
+      }
     </style>
+    <link rel="icon" href="img/favicon.ico" sizes="any" />
+    <script type="module" src="js/index.js"></script>
   </head>
   <body>
-    <!-- Add your site or application content here -->
-    <h1 class="text-5xl text-center font-semibold pt-20">
-      Hello world! Write your content here.
-    </h1>
+    <!-- Default (empty) -->
+    <text-input
+      label="Email"
+      placeholder="name@email.com"
+      hint="This is a hint text."
+      ><span slot="icon-end" class="icon-circle">?</span>
+    </text-input>
+
+    <!-- Filled with left icon -->
+    <text-input
+      label="Email"
+      placeholder="name@email.com"
+      value="name@email.com"
+      hint="This is a hint text."
+    >
+      <span slot="icon-start">📧</span
+      ><span slot="icon-end" class="icon-circle">?</span>
+    </text-input>
+
+    <!-- Disabled input -->
+    <text-input
+      label="Email"
+      placeholder="name@email.com"
+      value="name@email.com"
+      hint="This is a hint text."
+      disabled
+    >
+      ><span slot="icon-end" class="icon-circle">?</span>
+    </text-input>
+
+    <!-- Error state with right icon -->
+    <text-input
+      label="Email"
+      placeholder="name@email.com"
+      value="name@email.com"
+      error="This is a hint text."
+    >
+      <span slot="icon-end" class="icon-circle">?</span>
+    </text-input>
 
     <!-- Attribute this challenge to yourself! -->
     <div class="credits">
@@ -37,10 +78,9 @@
         target="_blank"
         >GreatFrontEnd Projects</a
       >. Built by
-      <a href="https://www.greatfrontend.com/u/your_username" target="_blank"
-        >Your Name</a
+      <a href="https://www.greatfrontend.com/u/pertrai1" target="_blank"
+        >Rob Simpson</a
       >.
     </div>
-    <script src="js/index.js"></script>
   </body>
 </html>

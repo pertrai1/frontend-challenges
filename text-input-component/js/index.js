@@ -1,3 +1,5 @@
+import "./svg-icon.js";
+
 const template = document.createElement("template");
 const generateId = (() => {
   return (prefix) => {
@@ -23,8 +25,8 @@ template.innerHTML = `
       --input-border-error: #d92d20;
       --input-disabled-bg: #f9fafb;
       --input-disabled-color: #9ca3af;
-      --hint-color: #667085;
-      --error-color: #d92d20;
+      --hint-color: #737373;
+      --error-color: #dc2626;
       --font-size: 1rem;
       --label-size: 0.875rem;
       --hint-size: 0.8125rem;

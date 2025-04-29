@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="index.js"></script>
+    <title>Tabs Component</title>
+  </head>
+  <body>
+    <section class="tabs-container">
+      <div role="tablist" class="tab-buttons">
+        <button
+          role="tab"
+          data-tab-button="html"
+          aria-selected="true"
+          aria-controls="html-panel"
+          class="active"
+        >
+          HTML
+        </button>
+        <button
+          role="tab"
+          data-tab-button="css"
+          aria-selected="false"
+          aria-controls="css-panel"
+        >
+          CSS
+        </button>
+        <button
+          role="tab"
+          data-tab-button="javascript"
+          aria-selected="false"
+          aria-controls="javascript-panel"
+        >
+          JavaScript
+        </button>
+      </div>
+      <div class="tab-content">
+        <div
+          role="tabpanel"
+          id="html-panel"
+          data-tab-content="html"
+          tabindex="0"
+        >
+          The HyperText Markup Language or HTML is the standard markup language
+          for documents designed to be displayed in a web browser.
+        </div>
+        <div
+          role="tabpanel"
+          id="css-panel"
+          data-tab-content="css"
+          class="hide"
+          tabindex="0"
+        >
+          Cascading Style Sheets is a style sheet language used for describing
+          the presentation of a document written in a markup language such as
+          HTML or XML.
+        </div>
+        <div
+          role="tabpanel"
+          id="javascript-panel"
+          data-tab-content="javascript"
+          class="hide"
+          tabindex="0"
+        >
+          JavaScript, often abbreviated as JS, is a programming language that is
+          one of the core technologies of the World Wide Web, alongside HTML and
+          CSS.
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

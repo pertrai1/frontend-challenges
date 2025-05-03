@@ -2,10 +2,43 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width; initial-scape=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hacker News Job Board</title>
     <link rel="stylesheet" href="styles.css" />
     <script defer src="index.js"></script>
   </head>
-  <body></body>
+  <body>
+    <section class="container">
+      <header>
+        <h1>Hacker News Job Board</h1>
+      </header>
+      <main>
+        <div id="loading-indicator" aria-live="polite" class="hidden">
+          Loading jobs...
+        </div>
+        <div id="error-message" aria-live="assertive" class="hidden"></div>
+        <ul id="job-board" aria-label="Job listings"></ul>
+        <div class="button-container">
+          <button
+            type="button"
+            id="load-more"
+            aria-label="Load more job listings"
+          >
+            Load more jobs
+          </button>
+        </div>
+      </main>
+      <footer>
+        <p>
+          Data from
+          <a
+            href="https://news.ycombinator.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Hacker News API</a
+          >
+        </p>
+      </footer>
+    </section>
+  </body>
 </html>

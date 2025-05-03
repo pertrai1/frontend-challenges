@@ -1,1 +1,154 @@
-/* add css here */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #ff6602;
+  --primary-hover-color: #e55a00;
+  --background-color: #f6f6ef;
+  --card-background: #fff;
+  --border-color: #dcdcdc;
+  --text-color: #333;
+  --error-color: #e74c3c;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+header h1 {
+  color: var(--primary-color);
+  margin-block-end: 1.5rem;
+  text-align: center;
+}
+
+#job-board {
+  list-style-type: none;
+  margin-bottom: 2rem;
+}
+
+#job-board li {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 1rem;
+  margin-block-end: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#job-board li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#job-board li h2 {
+  font-size: 1.15rem;
+  margin-block-end: 0.5rem;
+  color: var(--primary-color);
+}
+
+#job-board li p {
+  line-height: 1.5;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+#job-board li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#job-board li a:hover {
+  text-decoration: underline;
+}
+
+.button-container {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+#load-more {
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#load-more:hover {
+  cursor: pointer;
+  background-color: var(--primary-hover-color);
+}
+
+#load-more:active {
+  transform: translateY(1px);
+}
+
+#load-more:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+#loading-indicator,
+#error-message {
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+#error-message {
+  color: var(--error-color);
+  background-color: rgba(231, 76, 60, 0.1);
+  border: 1px solid var(--error-color);
+  border-radius: 4px;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.8rem;
+  color: #666;
+}
+
+footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .container {
+    padding: 0.5rem;
+  }
+
+  #job-board li {
+    padding: 0.75rem;
+  }
+}

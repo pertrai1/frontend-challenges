@@ -1,0 +1,275 @@
+<!DOCTYPE >
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress Bar</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Progress bar - solid variant</h1>
+      <div class="progress-bar">
+        <div
+          class="progress"
+          role="progressbar"
+          aria-valuenow="0"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 0"
+        ></div>
+      </div>
+      <div class="progress-bar">
+        <div
+          class="progress"
+          role="progressbar"
+          aria-valuenow="25"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 25%"
+        >
+          25%
+        </div>
+      </div>
+      <div class="progress-bar">
+        <div
+          class="progress"
+          role="progressbar"
+          aria-valuenow="50"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 50%"
+        >
+          50%
+        </div>
+      </div>
+      <div class="progress-bar">
+        <div
+          class="progress"
+          role="progressbar"
+          aria-valuenow="75"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 75%"
+        >
+          75%
+        </div>
+      </div>
+      <div class="progress-bar">
+        <div
+          class="progress"
+          role="progressbar"
+          aria-valuenow="100"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 100%"
+        >
+          100%
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <h1>Progress bar - striped variant</h1>
+      <div class="progress-bar">
+        <div
+          class="progress progress-striped"
+          role="progressbar"
+          aria-valuenow="0"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 0"
+        ></div>
+      </div>
+      <div class="progress-bar">
+        <div
+          class="progress progress-striped"
+          role="progressbar"
+          aria-valuenow="25"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 25%"
+        >
+          25%
+        </div>
+      </div>
+      <div class="progress-bar">
+        <div
+          class="progress progress-striped"
+          role="progressbar"
+          aria-valuenow="50"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 50%"
+        >
+          50%
+        </div>
+      </div>
+      <div class="progress-bar">
+        <div
+          class="progress progress-striped"
+          role="progressbar"
+          aria-valuenow="75"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 75%"
+        >
+          75%
+        </div>
+      </div>
+      <div class="progress-bar">
+        <div
+          class="progress progress-striped"
+          role="progressbar"
+          aria-valuenow="100"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 100%"
+        >
+          100%
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <h1>Progress bar - animated variant</h1>
+      <div class="progress-bar">
+        <div
+          class="progress progress-striped progress-animated"
+          role="progressbar"
+          aria-valuenow="100"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 100%"
+        >
+          100%
+        </div>
+      </div>
+      <div class="progress-bar">
+        <div
+          class="progress progress-striped progress-pulse"
+          role="progressbar"
+          aria-valuenow="50"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 50%"
+        >
+          50%
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <h1>Progress bar - color variants</h1>
+      <div class="progress-bar">
+        <div
+          class="progress progress-success"
+          role="progressbar"
+          aria-valuenow="50"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 50%"
+        >
+          50%
+        </div>
+      </div>
+      <div class="progress-bar">
+        <div
+          class="progress progress-warning"
+          role="progressbar"
+          aria-valuenow="75"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 75%"
+        >
+          75%
+        </div>
+      </div>
+      <div class="progress-bar">
+        <div
+          class="progress progress-danger"
+          role="progressbar"
+          aria-valuenow="100"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          stlle="width: 100%"
+        >
+          100%
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <h1>Progress bar - programmatic animation</h1>
+      <div class="progress-bar" id="demo-progress">
+        <div
+          class="progress"
+          role="progressbar"
+          aria-valuenow="0"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 0%"
+        ></div>
+      </div>
+      <div class="controls">
+        <button
+          onclick="animateProgress(document.getElementById('demo-progress'), 25)"
+        >
+          show 25% progress
+        </button>
+        <button
+          onclick="animateProgress(document.getElementById('demo-progress'), 50)"
+        >
+          show 50% progress
+        </button>
+        <button
+          onclick="animateProgress(document.getElementById('demo-progress'), 75)"
+        >
+          show 75% progress
+        </button>
+        <button
+          onclick="animateProgress(document.getElementById('demo-progress'), 100)"
+        >
+          show 100% progress
+        </button>
+      </div>
+    </div>
+    <div class="wrapper">
+      <h1>Progress bar - thin and thick</h1>
+      <div class="progress-bar progress-thin">
+        <div
+          class="progress"
+          role="progressbar"
+          aria-valuenow="75"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 75%"
+        ></div>
+      </div>
+      <div class="progress-bar progress-thick">
+        <div
+          class="progress"
+          role="progressbar"
+          aria-valuenow="75"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 75%"
+        >
+          75%
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <h1>Progress bar - miscellaneous</h1>
+      <div class="progress-bar progress-glow">
+        <div
+          class="progress"
+          role="progressbar"
+          aria-valuenow="50"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 50%"
+        >
+          50%
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

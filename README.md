@@ -3,5 +3,5 @@
 Challenges I have played around with from:
 
 - frontendmentors.io
-- reatfrontend.com
+- greatfrontend.com
 - cssbattle.dev

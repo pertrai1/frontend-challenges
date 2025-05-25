@@ -1,0 +1,41 @@
+.content-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 100vh;
+  transform: scale(1.25);
+  position: relative;
+}
+
+.eye-ball {
+  background: #e3cc9e;
+  height: 30px;
+  width: 80px;
+  border-radius: 55%;
+  position: absolute;
+}
+
+.left {
+  border: 40px solid #4a9a86;
+  left: 0;
+}
+
+.right {
+  right: 50px;
+}
+
+.partial-u {
+  border: 25px solid #4a9a86;
+  border-radius: 35%;
+  position: absolute;
+  height: 34%;
+  left: 38%;
+}
+
+.up {
+  top: 0;
+}
+
+.down {
+  bottom: 0;
+}

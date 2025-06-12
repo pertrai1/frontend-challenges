@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>USWDS Alert</title>
+    <!-- USWDS CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.13.0/dist/css/uswds.min.css"
+    />
+    <!-- USWDS JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.13.0/dist/js/uswds.min.js"
+      defer
+    ></script>
+    <script type="module" src="index.js"></script>
+  </head>
+  <body>
+    <div
+      class="usa-alert usa-alert--info"
+      id="custom-alert"
+      style="display: flex; justify-content: space-between"
+    >
+      <div class="usa-alert__body">
+        <h4 class="usa-alert__heading">Informative status</h4>
+        <p class="usa-alert__text">
+          Lorem ipsum dolor sit amet,
+          <a class="usa-link" href="javascript:void(0);"
+            >consectetur adipiscing</a
+          >
+          elit, sed do eiusmod.
+        </p>
+      </div>
+      <svg
+        class="usa-icon usa-icon--size-4"
+        aria-hidden="true"
+        focusable="false"
+        role="img"
+        onclick="document.getElementById('custom-alert').style.display='none'"
+        style="cursor: pointer"
+      >
+        <use href="/sprite.svg#close"></use>
+      </svg>
+    </div>
+  </body>
+</html>

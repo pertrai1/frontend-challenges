@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Carousel</title>
+  </head>
+  <body>
+    <image-carousel id="carousel"></image-carousel>
+    <script type="module" src="./image-carousel.js"></script>
+    <script>
+      document.getElementById("carousel").setAttribute(
+        "images",
+        JSON.stringify([
+          {
+            src: "https://picsum.photos/id/600/600/400",
+            alt: "Forest",
+          },
+          {
+            src: "https://picsum.photos/id/100/600/400",
+            alt: "Beach",
+          },
+          {
+            src: "https://picsum.photos/id/200/600/400",
+            alt: "Yak",
+          },
+          {
+            src: "https://picsum.photos/id/300/600/400",
+            alt: "Hay",
+          },
+          {
+            src: "https://picsum.photos/id/400/600/400",
+            alt: "Plants",
+          },
+          {
+            src: "https://picsum.photos/id/500/600/400",
+            alt: "Building",
+          },
+        ])
+      );
+    </script>
+  </body>
+</html>

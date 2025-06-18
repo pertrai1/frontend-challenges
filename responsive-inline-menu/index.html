@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+    <title>Responsive Inline Menu</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <nav class="menu">
+      <ul id="menuList">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Contact</a></li>
+        <li id="moreMenu" class="more hidden">
+          <button
+            id="moreButton"
+            popovertarget="moreDropdown"
+            popovertargetaction="toggle"
+          >
+            More ▼
+          </button>
+        </li>
+      </ul>
+      <ul
+        id="moreDropdown"
+        popover
+        anchor="moreButton"
+        class="dropdown-popover"
+      ></ul>
+      </ul>
+    </nav>
+  </body>
+</html>

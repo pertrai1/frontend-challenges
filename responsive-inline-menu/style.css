@@ -1,0 +1,67 @@
+/* Base Styles */
+body {
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+.menu {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Horizontal menu bar */
+#menuList {
+  display: flex;
+  flex-wrap: nowrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Individual items */
+.menu li {
+  white-space: nowrap;
+  padding: 0.5em 1em;
+  position: relative;
+}
+
+/* Hide utility */
+.hidden {
+  display: none !important;
+}
+
+
+
+/* Dropdown using Popover API */
+.dropdown-popover {
+  /* Override inherited flex styles */
+  position: absolute;
+  top: calc(anchor(bottom) + 5px);
+  background: white;
+  border: 1px solid #ccc;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 150px;
+  z-index: 1000;
+}
+
+/* Dropdown items */
+.dropdown-popover li {
+  display: block;
+  padding: 0.5em 1em;
+  border-bottom: 1px solid #eee;
+  white-space: nowrap;
+}
+
+.dropdown-popover li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-popover li:hover {
+  background: #f4f4f4;
+  cursor: pointer;
+}

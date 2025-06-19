@@ -32,11 +32,8 @@ body {
   display: none !important;
 }
 
-
-
 /* Dropdown using Popover API */
-.dropdown-popover {
-  /* Override inherited flex styles */
+/*.dropdown-popover {
   position: absolute;
   top: calc(anchor(bottom) + 5px);
   background: white;
@@ -48,7 +45,20 @@ body {
   min-width: 150px;
   z-index: 1000;
 }
+*/
+.dropdown-popover {
+  inset: unset;
+  position: absolute;
+  top: calc(anchor(bottom) + 5px);
+  justify-self: anchor-center;
+  margin: 0;
 
+  padding: 8px;
+  border-radius: 6px;
+  color: whitesmoke;
+  box-shadow: 1px 1px 3px #999;
+  border: none;
+}
 /* Dropdown items */
 .dropdown-popover li {
   display: block;

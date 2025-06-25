@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+main {
+  display: grid;
+  place-items: center;
+}
+
+.grid,
+.light {
+  border: 1px solid #000;
+}
+
+.grid {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 400px;
+  height: 400px;
+}
+
+.light,
+.noop-light {
+  width: 110px;
+  height: 110px;
+}
+
+.noop-light {
+  border: none;
+  pointer-events: none;
+}
+
+.activated {
+  background-color: green;
+}

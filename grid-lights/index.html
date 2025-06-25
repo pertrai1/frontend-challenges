@@ -9,7 +9,7 @@
   </head>
   <body>
     <main>
-      <div class="grid">
+      <div class="grid" role="grid" aria-label="Light grid game">
         <div class="light"></div>
         <div class="light"></div>
         <div class="light"></div>
@@ -20,7 +20,9 @@
         <div class="light"></div>
         <div class="light"></div>
       </div>
-      <p>order array: <span id="active-lights"></span></p>
+      <p>
+        Active lights: <span id="active-lights" aria-live="polite">None</span>
+      </p>
     </main>
   </body>
 </html>

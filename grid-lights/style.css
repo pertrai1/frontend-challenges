@@ -27,11 +27,36 @@ main {
   height: 110px;
 }
 
+.light {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+}
+
+.light:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.02);
+}
+
+.light:focus {
+  outline: 3px solid #007acc;
+  outline-offset: 2px;
+}
+
 .noop-light {
   border: none;
   pointer-events: none;
 }
 
 .activated {
-  background-color: green;
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+}
+
+.activated:hover {
+  background-color: #45a049;
 }

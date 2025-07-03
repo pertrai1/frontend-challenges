@@ -1,0 +1,118 @@
+/* Put any custom CSS styles here.  */
+/* Be sure to delete the <style> tag in index.html if you want to use this stylesheet. */
+body {
+  margin: 0;
+  font-family: "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 100px;
+  padding: 2rem 1rem;
+}
+
+.desktop-links-list {
+  display: none;
+  column-gap: 2rem;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+
+  a {
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+}
+
+#mobile-view {
+  position: fixed;
+  padding: 2rem 1rem;
+  transform: translate(0, 0);
+  top: 0;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  ul {
+    margin-top: 4rem;
+    padding-left: 0.25rem;
+
+    li {
+      padding-bottom: 1.5rem;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.btn {
+  background: none;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.btn-close {
+  position: absolute;
+  right: 17px;
+  top: 36px;
+}
+
+.btn-open {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.btn-primary,
+.btn-secondary {
+  border: 1px solid #000;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+}
+
+.btn-primary {
+  background-color: #4539ca;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #fff;
+}
+
+.credits {
+  color: #777;
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.credits a {
+  color: #000;
+  font-weight: bold;
+}

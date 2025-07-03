@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GreatFrontEnd Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/favicon.ico" sizes="any" />
+  </head>
+  <body>
+    <nav>
+      <picture>
+        <img src="img/abstractly.svg" alt="Abstractly logo" />
+      </picture>
+      <ul class="desktop-links-list">
+        <li><a href="">Home</a></li>
+        <li><a href="">Features</a></li>
+        <li><a href="">Pricing</a></li>
+        <li><a href="">About us</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+      <div class="btn-group">
+        <button type="button" role="button" class="btn btn-secondary">
+          Learn more
+        </button>
+        <button type="button" role="button" class="btn btn-primary">
+          See pricing
+        </button>
+      </div>
+      <button
+        aria-controls="mobile-view"
+        aria-expanded="false"
+        aria-label="Open menu"
+        class="btn btn-open"
+      >
+        <svg
+          id="svg-open"
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3.75 4.44446H16.25V5.83335H3.75V4.44446ZM3.75 9.30557H16.25V10.6945H3.75V9.30557ZM3.75 14.1667H16.25V15.5556H3.75V14.1667Z"
+            fill="#525252"
+          />
+        </svg>
+      </button>
+    </nav>
+    <section id="mobile-view" style="display: none">
+      <button class="btn btn-close">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10.0006 8.82208L14.1253 4.69727L15.3038 5.87577L11.1791 10.0006L15.3038 14.1253L14.1253 15.3038L10.0006 11.1791L5.87577 15.3038L4.69727 14.1253L8.82208 10.0006L4.69727 5.87577L5.87577 4.69727L10.0006 8.82208Z"
+            fill="#525252"
+          />
+        </svg>
+      </button>
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Features</a></li>
+        <li><a href="">Pricing</a></li>
+        <li><a href="">About us</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+      <div>
+        <button type="button" role="button">Learn more</button>
+        <button type="button" role="button">Try it out</button>
+      </div>
+    </section>
+    <div class="credits" data-gfe-screenshot-exclude="true">
+      A challenge by
+      <a
+        href="https://www.greatfrontend.com/projects?ref=challenges"
+        target="_blank"
+        >GreatFrontEnd Projects</a
+      >. Built by
+      <a
+        href="https://www.greatfrontend.com/projects/u/pertrai1"
+        target="_blank"
+        >Rob Simpson</a
+      >.
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>

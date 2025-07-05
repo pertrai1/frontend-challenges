@@ -66,6 +66,7 @@ Challenges I have played around with from:
 - [Tic Tac Toe](https://pertrai1.github.io/frontend-challenges/tic-tac-toe/)
 - [Toggle Switch](https://pertrai1.github.io/frontend-challenges/toggle-switch/)
 - [USWDS Alert](https://pertrai1.github.io/frontend-challenges/uswds-alert/)
+- [Traffic Light](https://pertrai1.github.io/frontend-challenges/traffic-light/)
 
 ### CSS Battle
 

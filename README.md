@@ -74,3 +74,4 @@ Challenges I have played around with from:
 - [CSS Battle - May 24, 2025](https://pertrai1.github.io/frontend-challenges/cssbattle/5242025/)
 - [CSS Battle - May 25, 2025](https://pertrai1.github.io/frontend-challenges/cssbattle/5252025/)
 - [CSS Battle - May 26, 2025](https://pertrai1.github.io/frontend-challenges/cssbattle/5262025/)
+- [CSS Battle - July 5, 2025](https://pertrai1.github.io/frontend-challenges/cssbattle/752025/)

@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+section {
+  background-color: #000;
+  border-radius: 5px;
+  padding: 1rem;
+
+  display: flex;
+  gap: 1rem;
+
+  width: 225px;
+}
+
+.traffic-light__vertical {
+  flex-direction: column;
+  margin-top: 1rem;
+  width: 85px;
+}
+
+.light {
+  background-color: #555;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}

@@ -20,6 +20,7 @@ Challenges I have played around with from:
 - [Four Card Feature Section](https://pertrai1.github.io/frontend-challenges/four-card-feature-section-master/)
 - [Huddle Landing Page](https://pertrai1.github.io/frontend-challenges/huddle-landing-page-with-single-introductory-section-master/)
 - [Interactive Card Details Form](https://pertrai1.github.io/frontend-challenges/interactive-card-details-form-main/)
+- [Interactive Pricing Component](https://pertrai1.github.io/frontend-challenges/interactive-pricing-component-main/)
 - [Interactive Rating Component](https://pertrai1.github.io/frontend-challenges/interactive-rating-component-main/)
 - [Intro Component with Signup Form](https://pertrai1.github.io/frontend-challenges/intro-component-with-signup-form-master/)
 - [IP Address Tracker](https://pertrai1.github.io/frontend-challenges/ip-address-tracker-master/)
@@ -67,6 +68,7 @@ Challenges I have played around with from:
 - [Toggle Switch](https://pertrai1.github.io/frontend-challenges/toggle-switch/)
 - [USWDS Alert](https://pertrai1.github.io/frontend-challenges/uswds-alert/)
 - [Traffic Light](https://pertrai1.github.io/frontend-challenges/traffic-light/)
+- [Interactive Pricing Component](https://pertrai1.github.io/frontend-challenges/interactive-pricing-component-main/component-demo.html)
 
 ### CSS Battle
 

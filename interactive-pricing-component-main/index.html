@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frontend Mentor | Interactive pricing component</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="header">
+    <h1>Simple, traffic-based pricing</h1>
+    <p>Sign-up for our 30-day trial. No credit card required.</p>
+  </div>
+  <main class="container">
+    <section class="pricing-card">
+      <div class="price-header">
+        <div class="price-title">100K PAGEVIEWS</div>
+        <div class="price-wrapper desktop-only">
+          <div class="price">
+            <span class="dollar-sign">$</span>
+            <span class="amount">16</span>
+          </div>
+          <span class="period">/month</span>
+        </div>
+      </div>
+      <div class="price-section">
+        <div class="slider-container">
+          <input type="range" min="0" max="100" value="50" class="slider" />
+        </div>
+
+        <div class="price-wrapper mobile-only">
+          <div class="price">
+            <span class="dollar-sign">$</span>
+            <span class="amount">16</span>
+          </div>
+          <span class="period">/month</span>
+        </div>
+
+        <div class="price-display">
+          <span>Monthly Billing</span>
+          <div class="billing-toggle">
+            <input type="checkbox" id="billing-toggle" class="billing-checkbox" />
+            <label for="billing-toggle"></label>
+          </div>
+          <div class="yearly-billing">
+            <span>Yearly Billing</span>
+            <div class="discount-tag">25% discount</div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="features">
+          <ul>
+            <li>Unlimited websites</li>
+            <li>100% data ownership</li>
+            <li>Email reports</li>
+          </ul>
+        </div>
+
+        <button class="start-trial">Start my trial</button>
+      </footer>
+    </section>
+  </main>
+
+  <div class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Rob
+      Simpson</a>.
+  </div>
+
+</body>
+
+</html>

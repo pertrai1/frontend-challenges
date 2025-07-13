@@ -5,6 +5,7 @@ Challenges I have played around with from:
 - frontendmentors.io
 - greatfrontend.com
 - cssbattle.dev
+- exercism.org
 
 ## Live Demos
 
@@ -77,3 +78,8 @@ Challenges I have played around with from:
 - [CSS Battle - May 25, 2025](https://pertrai1.github.io/frontend-challenges/cssbattle/5252025/)
 - [CSS Battle - May 26, 2025](https://pertrai1.github.io/frontend-challenges/cssbattle/5262025/)
 - [CSS Battle - July 5, 2025](https://pertrai1.github.io/frontend-challenges/cssbattle/752025/)
+
+### Exercism Bootcamp
+
+- [Bouncy Ball](https://pertrai1.github.io/frontend-challenges/exercism-bootcamp/bouncy-ball/)
+

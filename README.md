@@ -82,4 +82,5 @@ Challenges I have played around with from:
 ### Exercism Bootcamp
 
 - [Bouncy Ball](https://pertrai1.github.io/frontend-challenges/exercism-bootcamp/bouncy-ball/)
+- [Slithery Snake](https://pertrai1.github.io/frontend-challenges/exercism-bootcamp/slithery-snake/)
 

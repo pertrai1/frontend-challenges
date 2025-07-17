@@ -84,3 +84,4 @@ Challenges I have played around with from:
 - [Bouncy Ball](https://pertrai1.github.io/frontend-challenges/exercism-bootcamp/bouncy-ball/)
 - [Slithery Snake](https://pertrai1.github.io/frontend-challenges/exercism-bootcamp/slithery-snake/)
 - [Take Control](https://pertrai1.github.io/frontend-challenges/exercism-bootcamp/take-control/)
+- [Controlled Snake](https://pertrai1.github.io/frontend-challenges/exercism-bootcamp/controlled-snake/)

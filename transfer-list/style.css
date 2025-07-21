@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.list-wrapper {
+  border: 1px solid #ccc;
+  display: flex;
+}
+
+.list-left {
+  border-right: 1px solid #ccc;
+  margin-right: 1rem;
+  padding: 2rem 1.5rem;
+  width: 250px;
+
+  div {
+    margin-bottom: 1rem;
+  }
+}
+
+.list-buttons > button {
+  display: block;
+}
+
+.list-right {
+  border-left: 1px solid #ccc;
+  margin-left: 1rem;
+  padding: 2rem 1.5rem;
+  width: 250px;
+
+  div {
+    margin-bottom: 1rem;
+  }
+}

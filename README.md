@@ -66,6 +66,7 @@ Challenges I have played around with from:
 - [Testimonial Card](https://pertrai1.github.io/frontend-challenges/testimonial-card/)
 - [Text Input Component](https://pertrai1.github.io/frontend-challenges/text-input-component/)
 - [Tic Tac Toe](https://pertrai1.github.io/frontend-challenges/tic-tac-toe/)
+- [Tic Tac Toe 2](https://pertrai1.github.io/frontend-challenges/tic-tac-toe-2/)
 - [Toggle Switch](https://pertrai1.github.io/frontend-challenges/toggle-switch/)
 - [USWDS Alert](https://pertrai1.github.io/frontend-challenges/uswds-alert/)
 - [Traffic Light](https://pertrai1.github.io/frontend-challenges/traffic-light/)

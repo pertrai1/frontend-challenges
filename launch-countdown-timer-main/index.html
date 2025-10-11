@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!--
+    Why viewport meta tag?
+    Ensures responsive design works on mobile by preventing mobile browsers from
+    zooming out to show desktop layouts. width=device-width uses the device's actual width.
+  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--
+    Preconnect to Google Fonts for faster font loading
+    This establishes early connection while HTML is being parsed
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- Descriptive title for SEO and accessibility -->
+    <title>Launch Countdown Timer | Coming Soon</title>
+
+    <!-- Meta description for SEO -->
+    <meta
+      name="description"
+      content="We're launching soon! Check our countdown timer to see when we go live."
+    />
+
+    <!-- Link to external stylesheet - separation of concerns principle -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!--
+    Why <main>?
+    Semantic HTML - tells browsers and screen readers this is the primary content.
+    Important for accessibility (screen readers can jump directly to main content).
+  -->
+    <main class="container">
+      <!--
+      Why <h1> for "We're launching soon"?
+      This is the main heading of the page. Every page should have exactly one h1.
+      Screen readers use headings to navigate, so proper hierarchy is crucial.
+    -->
+      <h1 class="title">We're launching soon</h1>
+
+      <!--
+      Why <section> with aria-label?
+      Groups related content semantically. aria-label provides context for
+      screen reader users who might not understand the visual countdown.
+    -->
+      <section class="countdown" role="timer" aria-label="Countdown to launch">
+        <!--
+        Each time unit is wrapped in its own structure for styling and semantics.
+        We use data attributes (data-days, data-hours, etc) to make JavaScript
+        selection easier and more maintainable than classes.
+      -->
+
+        <!-- Days Card -->
+        <div class="time-unit" data-unit="days">
+          <!--
+          Flip card structure explained:
+          - .flip-card: container for the entire flipping animation
+          - .flip-card-top: visible top half of the card
+          - .flip-card-bottom: visible bottom half of the card
+          - .flip-card-back: the new number that flips in (hidden until animation)
+
+          Why this structure? The flip animation needs two copies of the number:
+          the current one (that flips away) and the new one (that flips in).
+        -->
+          <div class="flip-card">
+            <div class="flip-card-top">
+              <span data-value="days">08</span>
+            </div>
+            <div class="flip-card-bottom">
+              <span data-value="days">08</span>
+            </div>
+            <!-- This .flip-card-back is positioned absolutely and animated -->
+            <div class="flip-card-back">
+              <div class="flip-card-back-top">
+                <span data-value="days">08</span>
+              </div>
+              <div class="flip-card-back-bottom">
+                <span data-value="days">08</span>
+              </div>
+            </div>
+          </div>
+          <!--
+          aria-hidden="true" because the actual time value is read by the data-value.
+          We don't want screen readers to announce "DAYS" repeatedly.
+        -->
+          <p class="time-label" aria-hidden="true">Days</p>
+        </div>
+
+        <!-- Hours Card -->
+        <div class="time-unit" data-unit="hours">
+          <div class="flip-card">
+            <div class="flip-card-top">
+              <span data-value="hours">23</span>
+            </div>
+            <div class="flip-card-bottom">
+              <span data-value="hours">23</span>
+            </div>
+            <div class="flip-card-back">
+              <div class="flip-card-back-top">
+                <span data-value="hours">23</span>
+              </div>
+              <div class="flip-card-back-bottom">
+                <span data-value="hours">23</span>
+              </div>
+            </div>
+          </div>
+          <p class="time-label" aria-hidden="true">Hours</p>
+        </div>
+
+        <!-- Minutes Card -->
+        <div class="time-unit" data-unit="minutes">
+          <div class="flip-card">
+            <div class="flip-card-top">
+              <span data-value="minutes">55</span>
+            </div>
+            <div class="flip-card-bottom">
+              <span data-value="minutes">55</span>
+            </div>
+            <div class="flip-card-back">
+              <div class="flip-card-back-top">
+                <span data-value="minutes">55</span>
+              </div>
+              <div class="flip-card-back-bottom">
+                <span data-value="minutes">55</span>
+              </div>
+            </div>
+          </div>
+          <p class="time-label" aria-hidden="true">Minutes</p>
+        </div>
+
+        <!-- Seconds Card -->
+        <div class="time-unit" data-unit="seconds">
+          <div class="flip-card">
+            <div class="flip-card-top">
+              <span data-value="seconds">41</span>
+            </div>
+            <div class="flip-card-bottom">
+              <span data-value="seconds">41</span>
+            </div>
+            <div class="flip-card-back">
+              <div class="flip-card-back-top">
+                <span data-value="seconds">41</span>
+              </div>
+              <div class="flip-card-back-bottom">
+                <span data-value="seconds">41</span>
+              </div>
+            </div>
+          </div>
+          <p class="time-label" aria-hidden="true">Seconds</p>
+        </div>
+      </section>
+
+      <!--
+      Why <footer> for social links?
+      Semantic HTML - footer typically contains metadata, links, copyright info.
+      Even though it's not at the bottom of the page, it's the footer of the main content.
+    -->
+      <footer class="social-links">
+        <!--
+        Why <nav> with aria-label?
+        <nav> indicates navigation links. aria-label describes what kind of navigation
+        this is, helping screen reader users understand context.
+      -->
+        <nav aria-label="Social media links">
+          <ul class="social-list">
+            <!--
+            Why list structure?
+            Lists are semantic - screen readers announce "list of X items"
+            which helps users understand the content structure.
+          -->
+            <li>
+              <!--
+              Accessibility best practices for links:
+              - aria-label provides descriptive text (icon alone isn't descriptive)
+              - rel="noopener noreferrer" for security when using target="_blank"
+              - img with alt="" because aria-label on parent provides context
+
+              Why <img> instead of inline <svg>?
+              - Simpler HTML structure
+              - SVG files are cached by browser (better performance)
+              - Easier to update icons (just replace file)
+              - Less HTML to parse
+
+              Why alt=""?
+              - Icon is decorative (aria-label on <a> provides meaning)
+              - Empty alt tells screen readers to skip the image
+              - Avoids redundant "image" announcement
+            -->
+              <a
+                href="#"
+                aria-label="Visit our Facebook page"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="./images/icon-facebook.svg"
+                  alt=""
+                  width="24"
+                  height="24"
+                  aria-hidden="true"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                aria-label="Visit our Pinterest page"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="./images/icon-pinterest.svg"
+                  alt=""
+                  width="24"
+                  height="24"
+                  aria-hidden="true"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                aria-label="Visit our Instagram page"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="./images/icon-instagram.svg"
+                  alt=""
+                  width="24"
+                  height="24"
+                  aria-hidden="true"
+                />
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </footer>
+    </main>
+
+    <!--
+    Attribution kept but styled appropriately
+    Using <small> for fine print is semantically appropriate
+  -->
+    <div class="attribution">
+      <small>
+        Challenge by
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Rob Simpson</a>.
+      </small>
+    </div>
+
+    <!--
+    Why script at the end?
+    Scripts block HTML parsing. By placing at the end, the page content
+    loads first, improving perceived performance.
+    Modern alternative: use <script defer> in <head> which also allows
+    parsing to continue while script downloads.
+  -->
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -26,6 +26,7 @@ Challenges I have played around with from:
 - [Intro Component with Signup Form](https://pertrai1.github.io/frontend-challenges/intro-component-with-signup-form-master/)
 - [IP Address Tracker](https://pertrai1.github.io/frontend-challenges/ip-address-tracker-master/)
 - [Loopstudios Landing Page](https://pertrai1.github.io/frontend-challenges/loopstudios-landing-page-main/)
+- [Launch Countdown Timer](https://pertrai1.github.io/frontend-challenges/launch-countdown-timer-main/)
 - [News Homepage](https://pertrai1.github.io/frontend-challenges/news-homepage-main/)
 - [Newsletter Sign-up with Success Message](https://pertrai1.github.io/frontend-challenges/newsletter-sign-up-with-success-message-main/)
 - [NFT Preview Card Component](https://pertrai1.github.io/frontend-challenges/nft-preview-card-component-main/)

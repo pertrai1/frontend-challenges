@@ -46,6 +46,7 @@ Challenges I have played around with from:
 - [Sunnyside Agency Landing Page](https://pertrai1.github.io/frontend-challenges/sunnyside-agency-landing-page-main/)
 - [Testimonials Grid Section](https://pertrai1.github.io/frontend-challenges/testimonials-grid-section-main/)
 - [Tip Calculator App](https://pertrai1.github.io/frontend-challenges/tip-calculator-app-main/)
+- [URL Shortening API](https://pertrai1.github.io/frontend-challenges/url-shortening-api-master/)
 
 ### Custom Components
 

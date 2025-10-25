@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta
+      name="description"
+      content="Shortly - Advanced URL shortening service with detailed analytics and brand recognition features."
+    />
+    <meta
+      name="keywords"
+      content="URL shortener, link shortening, analytics, branding"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Shortly - Advanced URL Shortening Service</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="app.js" type="module" defer></script>
+  </head>
+  <body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header with Navigation -->
+    <header class="header" role="banner">
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="nav__container">
+          <!-- Logo -->
+          <div class="nav__brand">
+            <a href="/" aria-label="Shortly - Home">
+              <img src="./images/logo.svg" alt="Shortly" class="nav__logo" />
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button
+            class="nav__toggle"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+            aria-label="Toggle navigation menu"
+          >
+            <span class="nav__hamburger"></span>
+          </button>
+
+          <!-- Navigation Menu -->
+          <div class="nav__menu" id="nav-menu">
+            <ul class="nav__links" role="list">
+              <li><a href="#features" class="nav__link">Features</a></li>
+              <li><a href="#pricing" class="nav__link">Pricing</a></li>
+              <li><a href="#resources" class="nav__link">Resources</a></li>
+            </ul>
+
+            <div class="nav__actions">
+              <a href="#login" class="nav__link nav__link--login">Login</a>
+              <a href="#signup" class="btn btn--primary btn--small">Sign Up</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+      <!-- Hero Section -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero__container">
+          <div class="hero__content">
+            <h1 id="hero-heading" class="hero__title">
+              More than just shorter links
+            </h1>
+            <p class="hero__description">
+              Build your brand's recognition and get detailed insights on how
+              your links are performing.
+            </p>
+            <a href="#shorten-form" class="btn btn--primary btn--large"
+              >Get Started</a
+            >
+          </div>
+          <div class="hero__image">
+            <img
+              src="./images/illustration-working.svg"
+              alt="Person working at desk with computer"
+              class="hero__illustration"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- URL Shortening Section -->
+      <section class="shorten" aria-labelledby="shorten-heading">
+        <div class="shorten__container">
+          <h2 id="shorten-heading" class="sr-only">URL Shortening Tool</h2>
+
+          <!-- Shortening Form -->
+          <form
+            class="shorten__form"
+            id="shorten-form"
+            role="search"
+            aria-label="URL shortening form"
+          >
+            <div class="shorten__input-group">
+              <label for="url-input" class="sr-only"
+                >Enter URL to shorten</label
+              >
+              <input
+                type="url"
+                id="url-input"
+                class="shorten__input"
+                placeholder="Shorten a link here..."
+                aria-describedby="url-error"
+                required
+                autocomplete="url"
+              />
+              <div
+                id="url-error"
+                class="shorten__error"
+                role="alert"
+                aria-live="polite"
+              ></div>
+            </div>
+            <button type="submit" class="btn btn--primary shorten__submit">
+              Shorten It!
+            </button>
+          </form>
+
+          <!-- Results Container -->
+          <div
+            class="shorten__results"
+            id="shorten-results"
+            aria-live="polite"
+            aria-label="Shortened URLs"
+          >
+            <!-- Dynamic content will be inserted here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Statistics Section -->
+      <section class="stats" aria-labelledby="stats-heading">
+        <div class="stats__container">
+          <header class="stats__header">
+            <h2 id="stats-heading" class="stats__title">Advanced Statistics</h2>
+            <p class="stats__description">
+              Track how your links are performing across the web with our
+              advanced statistics dashboard.
+            </p>
+          </header>
+
+          <div class="stats__grid">
+            <!-- Brand Recognition Card -->
+            <article class="stats__card">
+              <div class="stats__icon">
+                <img
+                  src="./images/icon-brand-recognition.svg"
+                  alt=""
+                  class="stats__icon-img"
+                />
+              </div>
+              <h3 class="stats__card-title">Brand Recognition</h3>
+              <p class="stats__card-description">
+                Boost your brand recognition with each click. Generic links
+                don't mean a thing. Branded links help instil confidence in your
+                content.
+              </p>
+            </article>
+
+            <!-- Detailed Records Card -->
+            <article class="stats__card">
+              <div class="stats__icon">
+                <img
+                  src="./images/icon-detailed-records.svg"
+                  alt=""
+                  class="stats__icon-img"
+                />
+              </div>
+              <h3 class="stats__card-title">Detailed Records</h3>
+              <p class="stats__card-description">
+                Gain insights into who is clicking your links. Knowing when and
+                where people engage with your content helps inform better
+                decisions.
+              </p>
+            </article>
+
+            <!-- Fully Customizable Card -->
+            <article class="stats__card">
+              <div class="stats__icon">
+                <img
+                  src="./images/icon-fully-customizable.svg"
+                  alt=""
+                  class="stats__icon-img"
+                />
+              </div>
+              <h3 class="stats__card-title">Fully Customizable</h3>
+              <p class="stats__card-description">
+                Improve brand awareness and content discoverability through
+                customizable links, supercharging audience engagement.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action Section -->
+      <section class="cta" aria-labelledby="cta-heading">
+        <div class="cta__container">
+          <h2 id="cta-heading" class="cta__title">Boost your links today</h2>
+          <a href="#shorten-form" class="btn btn--primary btn--large"
+            >Get Started</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="footer__container">
+        <!-- Footer Logo -->
+        <div class="footer__brand">
+          <img src="./images/logo.svg" alt="Shortly" class="footer__logo" />
+        </div>
+
+        <!-- Footer Navigation -->
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <div class="footer__column">
+            <h3 class="footer__heading">Features</h3>
+            <ul class="footer__links" role="list">
+              <li><a href="#" class="footer__link">Link Shortening</a></li>
+              <li><a href="#" class="footer__link">Branded Links</a></li>
+              <li><a href="#" class="footer__link">Analytics</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <h3 class="footer__heading">Resources</h3>
+            <ul class="footer__links" role="list">
+              <li><a href="#" class="footer__link">Blog</a></li>
+              <li><a href="#" class="footer__link">Developers</a></li>
+              <li><a href="#" class="footer__link">Support</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <h3 class="footer__heading">Company</h3>
+            <ul class="footer__links" role="list">
+              <li><a href="#" class="footer__link">About</a></li>
+              <li><a href="#" class="footer__link">Our Team</a></li>
+              <li><a href="#" class="footer__link">Careers</a></li>
+              <li><a href="#" class="footer__link">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- Social Links -->
+        <div class="footer__social">
+          <h3 class="sr-only">Follow us on social media</h3>
+          <ul class="footer__social-links" role="list">
+            <li>
+              <a
+                href="#"
+                class="footer__social-link"
+                aria-label="Follow us on Facebook"
+              >
+                <img
+                  src="./images/icon-facebook.svg"
+                  alt="Facebook"
+                  class="footer__social-icon"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="footer__social-link"
+                aria-label="Follow us on Twitter"
+              >
+                <img
+                  src="./images/icon-twitter.svg"
+                  alt="Twitter"
+                  class="footer__social-icon"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="footer__social-link"
+                aria-label="Follow us on Pinterest"
+              >
+                <img
+                  src="./images/icon-pinterest.svg"
+                  alt="Pinterest"
+                  class="footer__social-icon"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="footer__social-link"
+                aria-label="Follow us on Instagram"
+              >
+                <img
+                  src="./images/icon-instagram.svg"
+                  alt="Instagram"
+                  class="footer__social-icon"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Attribution -->
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://www.frontendmentor.io/profile/pertrai1" target="_blank"
+          >Rob Simpson</a
+        >.
+      </div>
+    </footer>
+  </body>
+</html>

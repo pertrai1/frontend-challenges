@@ -42,6 +42,7 @@ Challenges I have played around with from:
 - [Single Price Grid Component](https://pertrai1.github.io/frontend-challenges/single-price-grid-component-master/)
 - [Social Links Profile](https://pertrai1.github.io/frontend-challenges/social-links-profile-main/)
 - [Social Proof Section](https://pertrai1.github.io/frontend-challenges/social-proof-section-master/)
+- [Static Job Listings](https://pertrai1.github.io/frontend-challenges/static-job-listings-master/)
 - [Stats Preview Card Component](https://pertrai1.github.io/frontend-challenges/stats-preview-card-component-main/)
 - [Sunnyside Agency Landing Page](https://pertrai1.github.io/frontend-challenges/sunnyside-agency-landing-page-main/)
 - [Testimonials Grid Section](https://pertrai1.github.io/frontend-challenges/testimonials-grid-section-main/)

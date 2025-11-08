@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Job listings with filtering - Frontend Mentor Challenge"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Job Listings</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <script type="module" src="components/FilterTag.js"></script>
+    <script type="module" src="components/JobCard.js"></script>
+    <script type="module" src="components/FilterBar.js"></script>
+    <script type="module" src="components/JobListings.js"></script>
+    <script type="module" src="js/app.js"></script>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__background"></div>
+    </header>
+
+    <main class="main-content">
+      <filter-bar></filter-bar>
+      <job-listings class="job-listings"></job-listings>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/pertrai1">Rob Simpson</a>.
+    </footer>
+  </body>
+</html>

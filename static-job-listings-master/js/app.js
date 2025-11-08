@@ -31,7 +31,10 @@ class JobListingsApp {
       // Escape key clears all filters
       if (e.key === "Escape") {
         const filterBar = document.querySelector("filter-bar");
-        if (filterBar && filterBar.filters.length > 0) {
+        if (
+          filterBar?.filters?.length > 0 &&
+          typeof filterBar.clearAllFilters === "function"
+        ) {
           filterBar.clearAllFilters();
           e.preventDefault();
         }
@@ -80,8 +83,10 @@ class JobListingsApp {
       if (e.target.matches(".job-title")) {
         const jobCard = e.target.closest("job-card");
         const jobId = jobCard?.getAttribute("data-job-id");
-        console.log("Job clicked:", jobId);
-        // Add analytics tracking here if needed
+        if (jobId) {
+          console.log("Job clicked:", jobId);
+          // Add analytics tracking here if needed
+        }
       }
     });
   }
@@ -130,7 +135,6 @@ class JobListingsApp {
     let timeout;
     return function executedFunction(...args) {
       const later = () => {
-        clearTimeout(timeout);
         func(...args);
       };
       clearTimeout(timeout);
@@ -150,8 +154,4 @@ class JobListingsApp {
   }
 }
 
-// Initialize the app
-const app = new JobListingsApp();
-
-// Export for potential use in other modules
 export default JobListingsApp;

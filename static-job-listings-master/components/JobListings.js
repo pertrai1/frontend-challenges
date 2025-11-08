@@ -4,6 +4,7 @@ class JobListings extends HTMLElement {
     this.allJobs = [];
     this.filteredJobs = [];
     this.activeFilters = [];
+    this.boundHandleFilterChange = this.handleFilterChange.bind(this);
   }
 
   connectedCallback() {
@@ -11,16 +12,13 @@ class JobListings extends HTMLElement {
     this.loadJobs();
 
     // Listen for filter changes
-    document.addEventListener(
-      "filters-changed",
-      this.handleFilterChange.bind(this)
-    );
+    document.addEventListener("filters-changed", this.boundHandleFilterChange);
   }
 
   disconnectedCallback() {
     document.removeEventListener(
       "filters-changed",
-      this.handleFilterChange.bind(this)
+      this.boundHandleFilterChange
     );
   }
 

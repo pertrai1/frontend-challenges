@@ -15,7 +15,7 @@ A responsive job listings page with filtering functionality built using modern H
 
 ### Component Structure
 
-```
+```text
 components/
 ├── FilterTag.js      # Individual filter tag component
 ├── JobCard.js        # Job listing card component
@@ -131,7 +131,7 @@ Each job in `data.json` contains:
 
 ## 📁 File Structure
 
-```
+```bash
 ├── index.html              # Main HTML file
 ├── styles.css              # Global styles and design system
 ├── data.json              # Job listings data

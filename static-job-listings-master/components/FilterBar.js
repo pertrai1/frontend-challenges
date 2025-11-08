@@ -2,6 +2,10 @@ class FilterBar extends HTMLElement {
   constructor() {
     super();
     this.activeFilters = new Set();
+
+    // Store bound handler references to prevent memory leaks
+    this._onAddFilter = this.handleAddFilter.bind(this);
+    this._onFiltersUpdated = this.handleFiltersUpdated.bind(this);
   }
 
   connectedCallback() {
@@ -9,19 +13,13 @@ class FilterBar extends HTMLElement {
     this.attachEventListeners();
 
     // Listen for filter events from the document
-    document.addEventListener("add-filter", this.handleAddFilter.bind(this));
-    document.addEventListener(
-      "filters-updated",
-      this.handleFiltersUpdated.bind(this)
-    );
+    document.addEventListener("add-filter", this._onAddFilter);
+    document.addEventListener("filters-updated", this._onFiltersUpdated);
   }
 
   disconnectedCallback() {
-    document.removeEventListener("add-filter", this.handleAddFilter.bind(this));
-    document.removeEventListener(
-      "filters-updated",
-      this.handleFiltersUpdated.bind(this)
-    );
+    document.removeEventListener("add-filter", this._onAddFilter);
+    document.removeEventListener("filters-updated", this._onFiltersUpdated);
   }
 
   render() {

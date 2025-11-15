@@ -16,6 +16,7 @@ Challenges I have played around with from:
 - [Age Calculator App](https://pertrai1.github.io/frontend-challenges/age-calculator-app-main/)
 - [Article Preview Component](https://pertrai1.github.io/frontend-challenges/article-preview-component-master/)
 - [Clipboard Landing Page](https://pertrai1.github.io/frontend-challenges/clipboard-landing-page-master/)
+- [Calculator](https://pertrai1.github.io/frontend-challenges/calculator-app-main/)
 - [Expenses Chart Component](https://pertrai1.github.io/frontend-challenges/expenses-chart-component-main/)
 - [FAQ Accordion Card](https://pertrai1.github.io/frontend-challenges/faq-accordion-card-main/)
 - [Four Card Feature Section](https://pertrai1.github.io/frontend-challenges/four-card-feature-section-master/)

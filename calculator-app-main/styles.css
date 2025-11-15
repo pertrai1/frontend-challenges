@@ -1,0 +1,415 @@
+/* CSS Custom Properties for Theme 1 (Default) */
+:root {
+  /* Theme 1 Colors */
+  --main-bg: hsl(222, 26%, 31%);
+  --toggle-keypad-bg: hsl(223, 31%, 20%);
+  --screen-bg: hsl(224, 36%, 15%);
+
+  --key-bg-1: hsl(225, 21%, 49%);
+  --key-shadow-1: hsl(224, 28%, 35%);
+
+  --key-bg-2: hsl(6, 63%, 50%);
+  --key-shadow-2: hsl(6, 70%, 34%);
+
+  --key-bg-3: hsl(0, 0%, 90%);
+  --key-shadow-3: hsl(28, 16%, 65%);
+
+  --text-1: hsl(221, 14%, 31%);
+  --text-2: hsl(0, 100%, 100%);
+
+  /* Typography */
+  --font-size: 32px;
+  --font-family: "League Spartan", sans-serif;
+  --font-weight: 700;
+}
+
+/* Theme 2 */
+.theme-2 {
+  --main-bg: hsl(0, 0%, 90%);
+  --toggle-keypad-bg: hsl(0, 5%, 81%);
+  --screen-bg: hsl(0, 0%, 93%);
+
+  --key-bg-1: hsl(185, 42%, 37%);
+  --key-shadow-1: hsl(185, 58%, 25%);
+
+  --key-bg-2: hsl(25, 98%, 40%);
+  --key-shadow-2: hsl(25, 99%, 27%);
+
+  --key-bg-3: hsl(45, 7%, 89%);
+  --key-shadow-3: hsl(35, 11%, 61%);
+
+  --text-1: hsl(60, 10%, 19%);
+  --text-2: hsl(0, 100%, 100%);
+}
+
+/* Theme 3 */
+.theme-3 {
+  --main-bg: hsl(268, 75%, 9%);
+  --toggle-keypad-bg: hsl(268, 71%, 12%);
+  --screen-bg: hsl(268, 71%, 12%);
+
+  --key-bg-1: hsl(281, 89%, 26%);
+  --key-shadow-1: hsl(285, 91%, 52%);
+
+  --key-bg-2: hsl(176, 100%, 44%);
+  --key-shadow-2: hsl(177, 92%, 70%);
+
+  --key-bg-3: hsl(268, 47%, 21%);
+  --key-shadow-3: hsl(290, 70%, 36%);
+
+  --text-1: hsl(198, 20%, 13%);
+  --text-2: hsl(52, 100%, 62%);
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  background-color: var(--main-bg);
+  color: var(--text-2);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  transition: background-color 0.3s ease;
+}
+
+/* App Container */
+.app {
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 32px;
+}
+
+.title {
+  font-size: 32px;
+  color: var(--text-2);
+  font-weight: var(--font-weight);
+}
+
+.theme-selector {
+  display: flex;
+  align-items: flex-end;
+  gap: 26px;
+}
+
+.theme-label {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: var(--text-2);
+  margin-bottom: 5px;
+}
+
+.theme-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.theme-options {
+  display: flex;
+  justify-content: space-around;
+  gap: 16px;
+}
+
+.theme-number {
+  font-size: 12px;
+  color: var(--text-2);
+  text-align: center;
+  min-width: 16px;
+}
+
+.theme-switch {
+  position: relative;
+  background-color: var(--toggle-keypad-bg);
+  border-radius: 13px;
+  padding: 5px;
+  display: flex;
+  gap: 4px;
+  width: 71px;
+  height: 26px;
+}
+
+.theme-switch input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.theme-switch input[type="radio"]:nth-child(1) {
+  left: 5px;
+}
+
+.theme-switch input[type="radio"]:nth-child(2) {
+  left: 27px;
+}
+
+.theme-switch input[type="radio"]:nth-child(3) {
+  right: 5px;
+}
+
+.theme-indicator {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: var(--key-bg-2);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  top: 5px;
+  left: 5px;
+}
+
+.theme-switch input[type="radio"]:nth-child(2):checked ~ .theme-indicator {
+  transform: translateX(22px);
+}
+
+.theme-switch input[type="radio"]:nth-child(3):checked ~ .theme-indicator {
+  transform: translateX(44px);
+}
+
+.theme-switch input[type="radio"]:focus {
+  outline: 2px solid var(--key-bg-2);
+  outline-offset: 2px;
+}
+
+/* Calculator */
+.calculator {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Display */
+.display {
+  background-color: var(--screen-bg);
+  border-radius: 10px;
+  padding: 24px;
+  text-align: right;
+}
+
+.display-input {
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--text-2);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  font-size: clamp(32px, 8vw, 56px);
+  text-align: right;
+  outline: none;
+  caret-color: transparent;
+}
+
+/* Keypad */
+.keypad {
+  background-color: var(--toggle-keypad-bg);
+  border-radius: 10px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 13px;
+  grid-template-areas:
+    "seven eight nine del"
+    "four five six plus"
+    "one two three minus"
+    "dot zero divide multiply"
+    "reset reset equals equals";
+}
+
+.key {
+  border: none;
+  border-radius: 5px;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  font-size: 32px;
+  padding: 11px;
+  min-height: 64px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Key variants */
+.key-number {
+  background-color: var(--key-bg-3);
+  color: var(--text-1);
+  box-shadow: 0 4px 0 var(--key-shadow-3);
+}
+
+.key-number:hover {
+  background-color: hsl(from var(--key-bg-3) h s calc(l + 10%));
+}
+
+.key-number:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 var(--key-shadow-3);
+}
+
+.key-operator {
+  background-color: var(--key-bg-1);
+  color: var(--text-2);
+  box-shadow: 0 4px 0 var(--key-shadow-1);
+}
+
+.key-operator:hover {
+  background-color: hsl(from var(--key-bg-1) h s calc(l + 10%));
+}
+
+.key-operator:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 var(--key-shadow-1);
+}
+
+.key-function {
+  background-color: var(--key-bg-1);
+  color: var(--text-2);
+  box-shadow: 0 4px 0 var(--key-shadow-1);
+  font-size: 20px;
+}
+
+.key-function:hover {
+  background-color: hsl(from var(--key-bg-1) h s calc(l + 10%));
+}
+
+.key-function:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 var(--key-shadow-1);
+}
+
+.key-reset {
+  grid-column: span 2;
+}
+
+.key-equals {
+  background-color: var(--key-bg-2);
+  color: var(--text-2);
+  box-shadow: 0 4px 0 var(--key-shadow-2);
+  grid-column: span 2;
+}
+
+.key-equals:hover {
+  background-color: hsl(from var(--key-bg-2) h s calc(l + 10%));
+}
+
+.key-equals:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 var(--key-shadow-2);
+}
+
+/* Focus styles for accessibility */
+.key:focus {
+  outline: 3px solid var(--key-bg-2);
+  outline-offset: 2px;
+}
+
+/* Attribution */
+.attribution {
+  margin-top: 32px;
+  font-size: 11px;
+  text-align: center;
+  color: var(--text-2);
+}
+
+.attribution a {
+  color: var(--key-bg-2);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  body {
+    padding: 16px;
+  }
+
+  .header {
+    margin-bottom: 24px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .calculator {
+    gap: 20px;
+  }
+
+  .display {
+    padding: 20px;
+  }
+
+  .display-input {
+    font-size: clamp(24px, 6vw, 40px);
+  }
+
+  .keypad {
+    padding: 20px;
+    gap: 11px;
+  }
+
+  .key {
+    font-size: 28px;
+    min-height: 56px;
+    padding: 8px;
+  }
+
+  .key-function {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 375px) {
+  .keypad {
+    gap: 8px;
+    padding: 16px;
+  }
+
+  .key {
+    font-size: 24px;
+    min-height: 48px;
+  }
+
+  .key-function {
+    font-size: 14px;
+  }
+}
+
+/* Fallback for browsers that don't support hsl(from ...) */
+@supports not (color: hsl(from red h s l)) {
+  .key-number:hover {
+    filter: brightness(1.1);
+  }
+
+  .key-operator:hover,
+  .key-function:hover {
+    filter: brightness(1.2);
+  }
+
+  .key-equals:hover {
+    filter: brightness(1.1);
+  }
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+
+    <title>Frontend Mentor | Calculator app</title>
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <h1 class="title">calc</h1>
+        <div class="theme-selector">
+          <span class="theme-label">THEME</span>
+          <div class="theme-toggle">
+            <div class="theme-options">
+              <span class="theme-number">1</span>
+              <span class="theme-number">2</span>
+              <span class="theme-number">3</span>
+            </div>
+            <div
+              class="theme-switch"
+              role="radiogroup"
+              aria-label="Theme selection"
+            >
+              <input
+                type="radio"
+                id="theme-1"
+                name="theme"
+                value="1"
+                aria-label="Theme 1"
+              />
+              <input
+                type="radio"
+                id="theme-2"
+                name="theme"
+                value="2"
+                aria-label="Theme 2"
+              />
+              <input
+                type="radio"
+                id="theme-3"
+                name="theme"
+                value="3"
+                aria-label="Theme 3"
+              />
+              <div class="theme-indicator"></div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="calculator">
+        <div class="display">
+          <input
+            type="text"
+            class="display-input"
+            readonly
+            value="0"
+            aria-label="Calculator display"
+          />
+        </div>
+
+        <div class="keypad" role="grid" aria-label="Calculator keypad">
+          <button class="key key-number" data-value="7" aria-label="7">
+            7
+          </button>
+          <button class="key key-number" data-value="8" aria-label="8">
+            8
+          </button>
+          <button class="key key-number" data-value="9" aria-label="9">
+            9
+          </button>
+          <button
+            class="key key-function"
+            data-action="delete"
+            aria-label="Delete"
+          >
+            DEL
+          </button>
+
+          <button class="key key-number" data-value="4" aria-label="4">
+            4
+          </button>
+          <button class="key key-number" data-value="5" aria-label="5">
+            5
+          </button>
+          <button class="key key-number" data-value="6" aria-label="6">
+            6
+          </button>
+          <button class="key key-operator" data-operator="+" aria-label="Plus">
+            +
+          </button>
+
+          <button class="key key-number" data-value="1" aria-label="1">
+            1
+          </button>
+          <button class="key key-number" data-value="2" aria-label="2">
+            2
+          </button>
+          <button class="key key-number" data-value="3" aria-label="3">
+            3
+          </button>
+          <button class="key key-operator" data-operator="-" aria-label="Minus">
+            -
+          </button>
+
+          <button
+            class="key key-number"
+            data-value="."
+            aria-label="Decimal point"
+          >
+            .
+          </button>
+          <button class="key key-number" data-value="0" aria-label="0">
+            0
+          </button>
+          <button
+            class="key key-operator"
+            data-operator="/"
+            aria-label="Divide"
+          >
+            /
+          </button>
+          <button
+            class="key key-operator"
+            data-operator="*"
+            aria-label="Multiply"
+          >
+            x
+          </button>
+
+          <button
+            class="key key-function key-reset"
+            data-action="reset"
+            aria-label="Reset"
+          >
+            RESET
+          </button>
+          <button
+            class="key key-function key-equals"
+            data-action="equals"
+            aria-label="Equals"
+          >
+            =
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/pertrai1">Rob Simpson</a>.
+    </footer>
+  </body>
+</html>

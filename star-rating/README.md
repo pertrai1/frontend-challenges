@@ -1,5 +1,7 @@
 # Star Rating
 
+![Star Rating Screenshot](screenshot.png)
+
 ## Requirements
 
 - The widget accepts two parameters: the maximum number of stars and the number of currently filled stars.

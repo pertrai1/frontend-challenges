@@ -1,5 +1,7 @@
 # Slithery Snake
 
+![Controlled Snake Screenshot](screenshot.png)
+
 Welcome to Part 2 of building Snake.
 
 In this exercise, we're adding two new elements:
